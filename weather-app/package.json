@@ -1,0 +1,26 @@
+{
+  "name": "ufscwheather",
+  "version": "1.0.0",
+  "description": "trabalho de isa",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hzezulka23/ISA.git"
+  },
+  "keywords": [
+    "ISA",
+    "wheater"
+  ],
+  "author": "Humberto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hzezulka23/ISA/issues"
+  },
+  "homepage": "https://github.com/hzezulka23/ISA#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
