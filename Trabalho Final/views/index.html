@@ -163,17 +163,6 @@ function RealTime() {
 	today = today.replace(" GMT-0000 (-0)","");
 	today = today.replace(/\D/g,'');
 	var k = today[6]+today[7];
-	k = Number(k);
-	k = k -3;
-	if (k == -3) {
-		k = 21;
-		}
-	if (k == -2) {
-		k = 22;
-		}
-	if (k == -1) {
-		k = 23;
-		}
 	k = String(k);		
 	var Time = ['2018','-','07','-',today[0]+today[1]," ",k,':',today[8]+today[9],':',+today[10]+today[11]];
 	Time = Time.join("");
