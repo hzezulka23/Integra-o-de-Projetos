@@ -234,10 +234,10 @@ router.get('/SaveParamgps2/:path', function(req, res, next) {
      const params = [parametros[0],parametros[1],parametros[2]];
     client.execute(insert,params,{ prepare: true }, function (err) {
         if (err) {
-           	console.log("erro gps1");
+           	console.log("erro gps2");
         }
         else{
-            console.log("Inserido gps1");
+            console.log("Inserido gps2");
         }
         });
 });
@@ -250,10 +250,10 @@ router.get('/SaveParamgps3/:path', function(req, res, next) {
      const params = [parametros[0],parametros[1],parametros[2]];
     client.execute(insert,params,{ prepare: true }, function (err) {
         if (err) {
-           	console.log("erro gps1");
+           	console.log("erro gps3");
         }
         else{
-            console.log("Inserido gps1");
+            console.log("Inserido gps3");
         }
         });
 });
@@ -266,10 +266,10 @@ router.get('/SaveParamgps5/:path', function(req, res, next) {
      const params = [parametros[0],parametros[1],parametros[2]];
     client.execute(insert,params,{ prepare: true }, function (err) {
         if (err) {
-           	console.log("erro gps1");
+           	console.log("erro gps5");
         }
         else{
-            console.log("Inserido gps1");
+            console.log("Inserido gps5");
         }
         });
 });

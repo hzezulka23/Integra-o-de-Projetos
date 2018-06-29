@@ -129,7 +129,7 @@ function f4() {
 	SendToIndexjs(param,function(data) {
 	document.getElementById('car').innerHTML = data[0];
 	document.getElementById('bus').innerHTML = data[1];
-	//f11(data[0],data[1]);			
+	f11(data[0],data[1]);			
 	});	
 }
 function f5() {
@@ -145,7 +145,7 @@ function f6() {
 	SendToIndexjs(param,function(data) {
 	document.getElementById('car').innerHTML = data[0];
 	document.getElementById('bus').innerHTML = data[1];	
-	//f12(data[0],data[1]);			
+	f12(data[0],data[1]);			
 	});	
 }
 function f7() {
@@ -153,7 +153,7 @@ function f7() {
 	SendToIndexjs(param,function(data) {
 	document.getElementById('car').innerHTML = data[0];
 	document.getElementById('bus').innerHTML = "UBER"	
-	//f13(data[0],data[1]);			
+	f13(data[0],data[1]);			
 	});	
 }
 
@@ -220,14 +220,14 @@ param = param.join("");
 
 function f11(car,bus) {
 	var Time = RealTime();
-var param = ["/SaveParamgps2/",Time,car,"_",bus];
+var param = ["/SaveParamgps2/",Time,"_",car,"_",bus];
 param = param.join("");
 	SendToIndexjs(param,function(data) {	
 	});	
 }
 function f12(car,bus) {
 	var Time = RealTime();
-var param = ["/SaveParamgps3/",Time,car,"_",bus];
+var param = ["/SaveParamgps3/",Time,"_",car,"_",bus];
 param = param.join("");
 	SendToIndexjs(param,function(data) {	
 	});	

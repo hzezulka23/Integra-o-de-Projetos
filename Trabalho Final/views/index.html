@@ -220,14 +220,14 @@ param = param.join("");
 
 function f11(car,bus) {
 	var Time = RealTime();
-var param = ["/SaveParamgps2/",Time,car,"_",bus];
+var param = ["/SaveParamgps2/",Time,"_",car,"_",bus];
 param = param.join("");
 	SendToIndexjs(param,function(data) {	
 	});	
 }
 function f12(car,bus) {
 	var Time = RealTime();
-var param = ["/SaveParamgps3/",Time,car,"_",bus];
+var param = ["/SaveParamgps3/",Time,"_",car,"_",bus];
 param = param.join("");
 	SendToIndexjs(param,function(data) {	
 	});	
@@ -235,7 +235,7 @@ param = param.join("");
 
 function f13(car,bus) {
 	var Time = RealTime();
-var param = ["/SaveParamgps5/",Time,car,"_",bus];
+var param = ["/SaveParamgps5/",Time,"_",car,"_",bus];
 param = param.join("");
 	SendToIndexjs(param,function(data) {	
 	});	
