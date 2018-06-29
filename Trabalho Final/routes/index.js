@@ -193,10 +193,13 @@ router.get('/Directions_to_Navegantes', function(req, res, next) {
       res.send(Direct4);
     } });});
     
-router.get('/SaveParam', function(req, res, next) {
-	
-    const insert = "insert into dados.clima(datevalue ,temperatura,umidade,vento)values('2015-10-30 16:10:32','10C','40%',('1km','sul'))";
-    client.execute(insert,{ prepare: true }, function (err) {
+router.get('/SaveParam/:path', function(req, res, next) {
+	 const path = (req.params.path);
+	 const parametros = path.split("_");
+	 console.log(parametros);
+    const insert = "insert into dados.clima(datevalue ,temperatura,umidade,vento)values(?,?,?,(?,?))";
+     const params = [parametros[0],parametros[1],parametros[2],parametros[3],parametros[4]];
+    client.execute(insert,params,{ prepare: true }, function (err) {
         if (err) {
            	console.log("erro");
         }
@@ -204,7 +207,71 @@ router.get('/SaveParam', function(req, res, next) {
             console.log("Inserido");
         }
         });
-	
+});
+
+
+router.get('/SaveParamgps1/:path', function(req, res, next) {
+	 const path = (req.params.path);
+	 const parametros = path.split("_");
+	 console.log(parametros);
+    const insert = "insert into dados.gps1(datevalue ,carro,onibus)values(?,?,?);";
+     const params = [parametros[0],parametros[1],parametros[2]];
+    client.execute(insert,params,{ prepare: true }, function (err) {
+        if (err) {
+           	console.log("erro gps1");
+        }
+        else{
+            console.log("Inserido gps1");
+        }
+        });
+});
+
+router.get('/SaveParamgps2/:path', function(req, res, next) {
+	 const path = (req.params.path);
+	 const parametros = path.split("_");
+	 console.log(parametros);
+    const insert = "insert into dados.gps2(datevalue ,carro,onibus)values(?,?,?);";
+     const params = [parametros[0],parametros[1],parametros[2]];
+    client.execute(insert,params,{ prepare: true }, function (err) {
+        if (err) {
+           	console.log("erro gps1");
+        }
+        else{
+            console.log("Inserido gps1");
+        }
+        });
+});
+
+router.get('/SaveParamgps3/:path', function(req, res, next) {
+	 const path = (req.params.path);
+	 const parametros = path.split("_");
+	 console.log(parametros);
+    const insert = "insert into dados.gps3(datevalue ,carro,onibus)values(?,?,?);";
+     const params = [parametros[0],parametros[1],parametros[2]];
+    client.execute(insert,params,{ prepare: true }, function (err) {
+        if (err) {
+           	console.log("erro gps1");
+        }
+        else{
+            console.log("Inserido gps1");
+        }
+        });
+});
+
+router.get('/SaveParamgps5/:path', function(req, res, next) {
+	 const path = (req.params.path);
+	 const parametros = path.split("_");
+	 console.log(parametros);
+    const insert = "insert into dados.gps5(datevalue ,carro,onibus)values(?,?,?);";
+     const params = [parametros[0],parametros[1],parametros[2]];
+    client.execute(insert,params,{ prepare: true }, function (err) {
+        if (err) {
+           	console.log("erro gps1");
+        }
+        else{
+            console.log("Inserido gps1");
+        }
+        });
 });
 
 app.use(express.static('public'));
