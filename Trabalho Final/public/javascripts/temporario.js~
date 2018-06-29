@@ -1,0 +1,314 @@
+var BLAZER = ['images/_testes/Blazer/496/496_Barbara Tfank.JPG',
+'images/_testes/Blazer/277/277_moschino.png',
+'images/_testes/Blazer/324/324_balmain.jpg',
+'images/_testes/Blazer/82/82_balmain.jpg',
+'images/_testes/Blazer/96/96_versace.jpg',
+'images/_testes/Blazer/323/323_balmain.jpg',
+'images/_testes/Blazer/78/78_pallas.jpg',
+'images/_testes/Blazer/1039/1039_Haider Ackermann.jpg',
+'images/_testes/Blazer/168/168_maisonmargiela.jpg',
+'images/_testes/Blazer/397/397_Giorgio Armani.jpg',
+'images/_testes/Blazer/77/77_therow.jpg',
+'images/_testes/Blazer/56/56_Balmain.jpg',
+'images/_testes/Blazer/286/286_dior.jpg',
+'images/_testes/Blazer/371/371_Jean Paul Gaultier.jpg',
+'images/_testes/Blazer/195/195_saintlaurent.jpg',
+'images/_testes/Blazer/57/57_atm.jpg',
+'images/_testes/Blazer/182/182_Alexander McQueen.jpg',
+'images/_testes/Blazer/136/136_giorgioarmani.jpg',
+'images/_testes/Blazer/329/329_Balmain.jpg',
+'images/_testes/Blazer/327/327_Balamain.jpg',
+'images/_testes/Blazer/89/89_dionlee.jpg',
+'images/_testes/Blazer/85/85_dior.jpg',
+'images/_testes/Blazer/27/27_Alexander McQueen.jpg',
+'images/_testes/Blazer/332/332_Balmain.jpg',
+'images/_testes/Blazer/331/331_saintlaurent.jpg',
+'images/_testes/Blazer/301/301_Alessandra Rich.jpg'
+]
+MANGA = ['images/_testes/Manga/127/127_valentino.jpg',
+'images/_testes/Manga/194/194_edun.jpg',
+'images/_testes/Manga/86/86_ullajohnson.jpg',
+'images/_testes/Manga/591/591_Christian Siriano.jpg',
+'images/_testes/Manga/121/121_gucci.jpg',
+'images/_testes/Manga/269/269_Balmain.jpg',
+'images/_testes/Manga/204/204_jeffreydodd.jpg',
+'images/_testes/Manga/215/215_albertaferretti.jpg',
+'images/_testes/Manga/142/142_roksanda.jpg',
+'images/_testes/Manga/556/556_Chalayan.jpg',
+'images/_testes/Manga/297/297_Gucci.jpg',
+'images/_testes/Manga/120/120_gucci.jpg',
+'images/_testes/Manga/12/12_toryburch.jpg',
+'images/_testes/Manga/104/104_monographie.jpg',
+'images/_testes/Manga/756/756_BCBG Max Azria.jpg',
+'images/_testes/Manga/167/167_Dolce _ Gabbana.jpg',
+'images/_testes/Manga/277/277_Jacquemus.jpg',
+'images/_testes/Manga/115/115_gucci.jpg',
+'images/_testes/Manga/47/47_kenzo.jpg',
+'images/_testes/Manga/197/197_ellery.jpg',
+'images/_testes/Manga/193/193_co.jpg',
+'images/_testes/Manga/169/169_dolcegabanna.jpg',
+'images/_testes/Manga/258/258_Kenzo.jpg',
+'images/_testes/Manga/130/130_valentino.jpg',
+'images/_testes/Manga/109/109_gucci.jpg',
+'images/_testes/Manga/201/201_huishan.jpg',
+'images/_testes/Manga/69/69_christopherkane.jpg',
+'images/_testes/Manga/344/344_Celine.jpg',
+'images/_testes/Manga/171/171_prada.jpg',
+'images/_testes/Manga/08/08_balmain.jpg',
+'images/_testes/Manga/283/283_Dolce e Gabbana.jpg',
+'images/_testes/Manga/264/264_Celine.jpg',
+'images/_testes/Manga/173/173_oscardelarenta.jpg',
+'images/_testes/Manga/223/223_chanel.jpg',
+'images/_testes/Manga/46/46_giambattista.jpg',
+'images/_testes/Manga/319/315_Antonio Berardi.jpg',
+'images/_testes/Manga/82/82_maticeveski.jpg'
+]
+var COSTAS = ['images/_testes/Costas/86/86_Desconhecido.jpg',
+'images/_testes/Costas/12/12_Balenciaga.jpg',
+'images/_testes/Costas/46/46_Yulia Yanina.jpg',
+'images/_testes/Costas/82/82_ZsaZsa Bellagio.jpg',
+'images/_testes/Costas/11/11_Michael Cinco.jpg',
+'images/_testes/Costas/96/96_Valentino.jpg',
+'images/_testes/Costas/94/94_Giambattista Valli.jpg',
+'images/_testes/Costas/42/42_Desconhecido.jpg',
+'images/_testes/Costas/78/78_Valentino.jpg',
+'images/_testes/Costas/23/23_Christophe Josse.jpg',
+'images/_testes/Costas/99/99_Alexander McQueen.jpg',
+'images/_testes/Costas/43/43_Carlos Miele.jpg',
+'images/_testes/Costas/65/65_Carolina Herrera.jpg',
+'images/_testes/Costas/74/74_Krikor Jabotian.jpg',
+'images/_testes/Costas/71/71_Christopher Kane Spring.jpg',
+'images/_testes/Costas/39/39_Sophie Theallet.jpg',
+'images/_testes/Costas/61/61_Desconhecido.jpg',
+'images/_testes/Costas/02/02_Desconhecido.jpg',
+'images/_testes/Costas/06/06_Yiqing Yin.jpg',
+'images/_testes/Costas/17/17_Desconhecido.jpg',
+'images/_testes/Costas/77/77_Ralph Lauren.jpg',
+'images/_testes/Costas/81/81_Guo Pei.jpg',
+'images/_testes/Costas/4/4_halstonheritage.png',
+'images/_testes/Costas/53/53_Charbel Zoe.jpg',
+'images/_testes/Costas/03/03_Titania Inglis.jpg',
+'images/_testes/Costas/22/22_Zuhair Murad.jpg',
+'images/_testes/Costas/50/50_Vionnet.jpg',
+'images/_testes/Costas/26/26_Ralph e Russo.jpg',
+'images/_testes/Costas/44/44_Viktor e Rolf.jpg',
+'images/_testes/Costas/33/33_Elie Saab.jpg',
+'images/_testes/Costas/52/52_Krikor Jabotian.jpg',
+'images/_testes/Costas/56/56_Vika Gazinskaya.jpg',
+'images/_testes/Costas/20/20_Desconhecido.jpg',
+'images/_testes/Costas/75/75_Valentino.jpg',
+'images/_testes/Costas/25/25_privacyplease.jpg',
+'images/_testes/Costas/49/49_Armani.jpg',
+'images/_testes/Costas/54/54_Limor Rosen.jpg',
+'images/_testes/Costas/55/55_Guo Pei.jpg',
+'images/_testes/Costas/95/95_Givenchy.jpg',
+'images/_testes/Costas/37/37_Valentino.jpg',
+'images/_testes/Costas/48/48_Yves Saint Laurent.jpg',
+'images/_testes/Costas/19/19_Chanel.jpg',
+'images/_testes/Costas/38/38_Zuhair Murad.jpg',
+'images/_testes/Costas/64/64_Carolina Herrera.jpg',
+'images/_testes/Costas/91/91_Versace.jpg',
+'images/_testes/Costas/92/92_Schiaparelli.jpg',
+'images/_testes/Costas/57/57_ALC.jpg',
+'images/_testes/Costas/15/15_Desconhecido.jpg',
+'images/_testes/Costas/34/34_Schiaparelli.jpg',
+'images/_testes/Costas/07/07_Desconhecido.jpg',
+'images/_testes/Costas/59/59_Ulyana Sergeenko.jpg',
+'images/_testes/Costas/98/98_Chanel.jpg',
+'images/_testes/Costas/76/76_Helen Rodel.jpg',
+'images/_testes/Costas/93/93_Schiaparelli.jpg',
+'images/_testes/Costas/58/58_Elie Saab.jpg',
+'images/_testes/Costas/18/18_Charbel Zoe.jpg',
+'images/_testes/Costas/14/14_Valentino.jpg',
+'images/_testes/Costas/89/89_Vika Gazinskaya.jpg',
+'images/_testes/Costas/29/29_Desconhecido.jpg',
+'images/_testes/Costas/10/10_Desconhecido.jpg',
+'images/_testes/Costas/35/35_Valentino.jpg',
+'images/_testes/Costas/72/72_jmendel.jpg',
+'images/_testes/Costas/45/45_Givenchy.jpg',
+'images/_testes/Costas/27/27_Chic Yanina.jpg',
+'images/_testes/Costas/97/97_Schiaparelli.jpg',
+'images/_testes/Costas/70/70_Laure Sagazan.jpg',
+'images/_testes/Costas/13/13_Ralph Lauren.jpg',
+'images/_testes/Costas/79/79_Versace.jpg',
+'images/_testes/Costas/63/63_Desconhecido.jpg',
+'images/_testes/Costas/09/09_Desconhecido.jpg',
+'images/_testes/Costas/01/01_Bouchra Jarrar.jpg'
+]
+var SHORTS =['images/_testes/Shorts/12/12_valentino.jpg',
+'images/_testes/Shorts/82/82_Chlo+®.JPG',
+'images/_testes/Shorts/107/107_talienk.jpg',
+'images/_testes/Shorts/74/74_David Koma.jpg',
+'images/_testes/Shorts/24/24_moschino.jpg',
+'images/_testes/Shorts/195/195_Fendi.jpg',
+'images/_testes/Shorts/265/265_moschino.jpg',
+'images/_testes/Shorts/76/76_Chlo+®.jpg',
+'images/_testes/Shorts/178/178_Baum und Pferdgarten.jpg',
+'images/_testes/Shorts/84/84_Chlo+®.jpg']
+var JEANS = ['images/_testes/Jeans/86/86_Cello.jpg',
+'images/_testes/Jeans/12/12_Derek Lam.jpg',
+'images/_testes/Jeans/104/104_Citizens of Humanity.jpg',
+'images/_testes/Jeans/47/47_Alexander Wang.jpg',
+'images/_testes/Jeans/109/109_Yue Mei.jpg',
+'images/_testes/Jeans/69/69_Philipp Plein.jpg',
+'images/_testes/Jeans/08/08_Golden Goose.jpg',
+'images/_testes/Jeans/46/46_Alice+Olivia.jpg',
+'images/_testes/Jeans/82/82_balmain.jpg',
+'images/_testes/Jeans/11/11_Off-White.jpg',
+'images/_testes/Jeans/90/90_Blue Anarchy.jpg',
+'images/_testes/Jeans/96/96_Desconhecido.jpg',
+'images/_testes/Jeans/30/30_3.1 Phillip Lim.jpg',
+'images/_testes/Jeans/42/42_Isabel Marant.jpg',
+'images/_testes/Jeans/23/23_Etro.jpg',
+'images/_testes/Jeans/28/28_Mixed.jpg',
+'images/_testes/Jeans/105/105_Seafarer.jpg',
+'images/_testes/Jeans/99/99_Desconhecido.jpg',
+'images/_testes/Jeans/43/43_Dolce e Gabbana.jpg',
+'images/_testes/Jeans/65/65_Peter Pilotto.jpg',
+'images/_testes/Jeans/88/88_Balmain.JPG',
+'images/_testes/Jeans/74/74_Dsquared2.jpg',
+'images/_testes/Jeans/71/71_Marques_almeida.jpg',
+'images/_testes/Jeans/102/102_Citizens of Humanity.jpg',
+'images/_testes/Jeans/39/39_Alexander Wang.jpg',
+'images/_testes/Jeans/51/51_Forte Couture.jpg',
+'images/_testes/Jeans/61/61_Paige.jpg',
+'images/_testes/Jeans/101/101_Le Nouveau.jpg',
+'images/_testes/Jeans/02/02_Balmain.jpg',
+'images/_testes/Jeans/04/04_ReDone.jpg',
+'images/_testes/Jeans/06/06_Animale.jpg',
+'images/_testes/Jeans/17/17_Stella McCartney.jpg',
+'images/_testes/Jeans/81/81_Patrizia Pepe.jpg',
+'images/_testes/Jeans/112/112_Balmain.jpg',
+'images/_testes/Jeans/53/53_Current Elliott.jpg',
+'images/_testes/Jeans/36/36_Dolce e Gabbana.jpg',
+'images/_testes/Jeans/40/40_Bo.B+¦.jpg',
+'images/_testes/Jeans/03/03_Saint Laurent.jpg',
+'images/_testes/Jeans/22/22_Stella McCartney.jpg',
+'images/_testes/Jeans/50/50_Sjyp.jpg',
+'images/_testes/Jeans/26/26_Maison Margiela.jpg',
+'images/_testes/Jeans/44/44_A.Brand.jpg',
+'images/_testes/Jeans/33/33_Philipp Plein.jpg',
+'images/_testes/Jeans/52/52_Current Elliott.jpg',
+'images/_testes/Jeans/56/56_Victoria Victoria Beckham.jpg',
+'images/_testes/Jeans/20/20_Rag e Bone.jpg',
+'images/_testes/Jeans/75/75_Unravel.jpg',
+'images/_testes/Jeans/103/103_Alexis.jpg',
+'images/_testes/Jeans/25/25_ReDone.jpg',
+'images/_testes/Jeans/49/49_3x1.jpg',
+'images/_testes/Jeans/41/41_Philipp Plein.jpg',
+'images/_testes/Jeans/87/87_Dirty.jpg',
+'images/_testes/Jeans/54/54_Christopher Kane.JPG',
+'images/_testes/Jeans/55/55_Stella McCartney.jpg',
+'images/_testes/Jeans/24/24_Sonia Rykiel.jpg',
+'images/_testes/Jeans/37/37_Fendi.jpg',
+'images/_testes/Jeans/48/48_Off-White.jpg',
+'images/_testes/Jeans/19/19_Maison Margiela.jpg',
+'images/_testes/Jeans/38/38_7 For All Mankind.jpg',
+'images/_testes/Jeans/64/64_Iorane.jpg',
+'images/_testes/Jeans/32/32_Philipp Plein.jpg',
+'images/_testes/Jeans/83/83_Mom Jeans.jpg',
+'images/_testes/Jeans/91/91_Marco Bologna.jpg',
+'images/_testes/Jeans/92/92_Levi_s.jpg',
+'images/_testes/Jeans/57/57_Citizens of Humanity.jpg',
+'images/_testes/Jeans/15/15_Animale.jpg',
+'images/_testes/Jeans/34/34_Stella McCartney.jpg',
+'images/_testes/Jeans/07/07_Balenciaga.jpg',
+'images/_testes/Jeans/59/59_Michael Kors.jpg',
+'images/_testes/Jeans/93/93_Joe_s.jpg',
+'images/_testes/Jeans/58/58_Alice + Olivia.jpg',
+'images/_testes/Jeans/175/175_Baum und Pferdgarten.jpg',
+'images/_testes/Jeans/60/60_Marc Jacobs.jpg',
+'images/_testes/Jeans/18/18_Marques_almeida.jpg',
+'images/_testes/Jeans/14/14_Paige.jpg',
+'images/_testes/Jeans/89/89_Stella McCartney.jpg',
+'images/_testes/Jeans/16/16_Balmain.jpg',
+'images/_testes/Jeans/31/31_Amap+¦.jpg',
+'images/_testes/Jeans/110/110_Fashion East.jpg',
+'images/_testes/Jeans/29/29_Dolce e Gabbana.jpg',
+'images/_testes/Jeans/10/10_Golden Goose.jpg',
+'images/_testes/Jeans/35/35_Alexandrt Wang.jpg',
+'images/_testes/Jeans/72/72_Kenzo.jpg',
+'images/_testes/Jeans/106/106_Christopher Kane.jpg',
+'images/_testes/Jeans/85/85_Desconhecido.jpg',
+'images/_testes/Jeans/45/45_Unravel.jpg',
+'images/_testes/Jeans/27/27_Marques_almeida.jpg',
+'images/_testes/Jeans/66/66_Roberto Cavalli.jpg',
+'images/_testes/Jeans/70/70_Loewe.jpg',
+'images/_testes/Jeans/68/68_Michael Kors.jpg',
+'images/_testes/Jeans/62/62_The Seafarer.jpg',
+'images/_testes/Jeans/13/13_Dsquared2.jpg',
+'images/_testes/Jeans/79/79_Desconhecido.jpg',
+'images/_testes/Jeans/63/63_Maison Margiela.jpg',
+'images/_testes/Jeans/21/21_Moschino.jpg',
+'images/_testes/Jeans/73/73_Giamba.jpg',
+'images/_testes/Jeans/09/09_Dsquared2.jpg',
+'images/_testes/Jeans/111/111_Dolce e Gabbana.jpg',
+'images/_testes/Jeans/01/01_Tufi Duek.jpg',
+'images/_testes/Jeans/84/84_Amen.jpg',
+'images/_testes/Jeans/05/05_Mixed.jpg',
+'images/_testes/Jeans/67/67_Philipp Plein.jpg',
+'images/_testes/Jeans/176/176.jpg',
+'images/_testes/Jeans/80/80_Kenzo.jpg',
+'images/_testes/Jeans/113/113_Desconhecido.jpg']
+
+function temp(classe) 
+{
+	var tamanho = (BLAZER.length);
+	if(classe==1){		
+		var index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp1F1").src	= BLAZER[index];
+		PegarTamanho(BLAZER[index],"ExpF1");
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp1F2").src	= BLAZER[index];
+		PegarTamanho(BLAZER[index],"ExpF2");
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp1F3").src	= BLAZER[index];
+		PegarTamanho(BLAZER[index],"ExpF3");
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp1F4").src	= BLAZER[index];
+		PegarTamanho(BLAZER[index],"ExpF4");
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp1F5").src	= BLAZER[index];
+		PegarTamanho(BLAZER[index],"ExpF5");
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp2F1").src	= BLAZER[index];
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp2F2").src	= BLAZER[index];
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp2F3").src	= BLAZER[index];
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp2F4").src	= BLAZER[index];
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp2F5").src	= BLAZER[index];
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp3F1").src	= BLAZER[index];
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp3F2").src	= BLAZER[index];
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp3F3").src	= BLAZER[index];
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp3F4").src	= BLAZER[index];
+		index = Math.floor((Math.random()*(tamanho)));
+		document.getElementById("ImgExp3F5").src	= BLAZER[index];
+		
+	}
+}
+
+function CamadaExtra() {
+	var tamanho = (BLAZER.length);	
+	var index = Math.floor((Math.random()*(tamanho)));
+	document.getElementById("imgextra1").src	= BLAZER[index];
+	var tamanho = (MANGA.length);	
+	var index = Math.floor((Math.random()*(tamanho)));
+	document.getElementById("imgextra2").src	= MANGA[index];
+	var tamanho = (COSTAS.length);	
+	var index = Math.floor((Math.random()*(tamanho)));
+	document.getElementById("imgextra3").src	= COSTAS[index];
+	var tamanho = (JEANS.length);	
+	var index = Math.floor((Math.random()*(tamanho)));
+	document.getElementById("imgextra5").src	= JEANS[index];
+	var tamanho = (SHORTS.length);	
+	var index = Math.floor((Math.random()*(tamanho)));
+	document.getElementById("imgextra4").src	= SHORTS[index];
+
+}

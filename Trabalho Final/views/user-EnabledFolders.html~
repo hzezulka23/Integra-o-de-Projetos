@@ -1,0 +1,261 @@
+<!doctype html>
+
+<html>
+	<head>
+		
+		<title> SLOTSFASHION - USER</title>
+		<meta charset = "utf-8" />
+		<meta name = "description" content = " Software de criação para moda" />
+		<meta name = "keywords" content = "moda, criação,ideia" />
+		<meta name="author" content="hzm" />
+		<link rel = "stylesheet" type="text/css" href = "stylesheets/estilo.css" />
+		<link rel = "stylesheet" type="text/css" href = "stylesheets/normalize.css" />
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet"/>
+		<script src="javascripts/main.js"></script>
+		<script src="javascripts/user.js"></script>		
+		<script src="javascripts/Transactions.js"></script>
+		<script src="javascripts/temporario.js"></script>		
+		<script src ="javascripts/jquery-3.3.1.js"></script>	
+		
+		
+	</head>
+	
+<body>																																																																																																																																																																																																								
+	<!--------Menu A Esquerda -------------------->																																																																																																																																																																																																								
+	<div style = "z-index: -1;background-color: black;position: absolute; height: 100%; width : 100%; margin:0 auto; padding: 0px 0; margin-left: 0px; padding-right: 0px;">
+		<div style = "position:absolute; margin-left: 2%;margin-top:1%;height:10% ; width: 25%; background-color:;">
+		<h3 style = "color: #8C8C8C; font-size: 25px;">Andressa Schneider</h3>
+			<img src="images/Home.png" alt="" style="position:absolute; height:73% ;width: 15% ; margin-top:-20%;margin-left: 95%;" >
+		</div>
+		<div style = "position:absolute; margin-left: 2%;margin-top:12%;height:50% ; width: 25%;">
+		<div style = "width: 100%; height: 8%; background-color:black;margin-top: 20%;" > 
+			<img id = "SetaMP"src= "images/MenuEsquerda.png" alt="" style= "height:66% ;width: 3% ;" >
+			<h3 id="opcao1"; style = "color: #8C8C8C; font-size: 18px; margin-left:5%;margin-top:-6.5%; cursor: pointer "; onmouseover="Mudarcor('opcao1')"; onmouseout="Voltarcor('opcao1')"; onclick ="ShowFolderOptions()">MINHAS PASTAS</h3>;
+		</div>
+		<div id="FolderOptionsMain" style="display: none;">
+		<div id = "FolderOptions1" class = "FolderOptions"; style = "width: 100%; height: 28px; display: block; " > 
+			<img src="images/NFMini.png" alt="" style= "height:12px ;width: 12px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions1"  style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-5%; cursor: pointer;  "; >NOVA PASTA</h3>;
+		</div>
+		<div id = "FolderOptions2" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions2" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 1</h3>;
+		</div>
+		<div id = "FolderOptions3" class = "FolderOptions"; style = "width: 100%; height: 28px; display:none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions3" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 2</h3>;
+		</div>
+		<div  id = "FolderOptions4" class = "FolderOptions"; style = "width: 100%; height: 28px; display:none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions4" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 3</h3>;
+		</div>
+		<div  id = "FolderOptions5" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions5" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 4</h3>;
+		</div>
+		<div  id = "FolderOptions6" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions6" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 5</h3>;
+		</div>
+		<div  id = "FolderOptions7" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions7" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 6</h3>;
+		</div>
+		<div  id = "FolderOptions8" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions8" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 7</h3>;
+		</div>
+		<div  id = "FolderOptions9" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions9" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 8</h3>;
+		</div>
+		<div  id = "FolderOptions10" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions10" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 9</h3>;
+		</div>
+			<div  id = "FolderOptions11" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions11" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 10</h3>;
+		</div>
+		</div>
+		<div style = "width: 100%; height: 8%; background-color:black;margin-top: 0% " > 			
+			<img src="images/MenuEsquerda.png" alt="" style= "height:66% ;width: 3%;margin-top:8%;" >			
+			<h3 id="opcao3" style = "color: #8C8C8C;font-size: 18px; margin-left:5%;margin-top:-6.8%;cursor: pointer "; onmouseover="Mudarcor('opcao3')"; onmouseout="Voltarcor('opcao3')"; onclick="GotoCreatedFolderPage()">MEUS DADOS</h3>;
+		</div>
+		<div style = "width: 100%; height: 8%; background-color:black;margin-top: 0% " > 	
+			<img src="images/MenuEsquerda.png" alt="" style= "height:66% ;width: 3%;margin-top:15%;" >			
+			<h3 id="opcao4" style = "color: #8C8C8C;font-size: 18px; margin-left:5%;margin-top:-6.5%; cursor: pointer "; onmouseover="Mudarcor('opcao4')"; onmouseout="Voltarcor('opcao4')">PLANOS DE ASSINATURA</h3>;
+		</div>		
+		<div style = "width: 100%; height: 8%; background-color:black;margin-top: 0% " > 						
+			<h3 id="opcao5" style = "color: #8C8C8C;font-size: 18px;margin-left:5%;margin-top:21%;cursor: pointer "; onmouseover="Mudarcor('opcao5')"; onmouseout="Voltarcor('opcao5')" ; onclick="GotoMainPage()" >SAIR</h3>;		
+		</div>
+		</div>
+		
+		<! --------Menu Editar Pasta --------------------->
+
+		<div id = "MainEditar" style = "display:none;background-color: rgba(255,255,255,0.7); position: fixed;height: 100%; width :100%; z-index: 6;">
+			<div id = "CaixaDialago" style = "margin:auto; margin-top:130px; background-color: white;height: 59%; width :33.5%; border-style: solid; ">
+				<div id = "CaixaDialago" style = " background-color:black;height:7%; width:100%;">
+					<h3 style = "color: white; font-size:18px; margin-top:0.4%; margin-left:1%; position: absolute; ">Editar Pasta</h3>
+					<img src="images/x_branco.png"; onclick="SairJanelaEditar()" style = "position: absolute; width:14px; height:14px;margin-left: 31%;margin-top:0.5%;">				
+				</div>
+				<div id = "NomeDaPasta" style = "margin-top:13%;position: relative; background-color:white;height:8%; width:100%;">
+						<h3 style = "color: black; font-size:16px; margin-top:2%; margin-left:3%; position: absolute; ">Nome:</h3>
+						<form id="inputform2" onsubmit="return false;"> 
+						<input class="input"; type= "text"; id="input2"; style="overflow:visible; position:absolute; margin-left:22%;border-color: black; border-style: solid; border-width: 2px; width: 70%; height: 70%;"; placeholder=" Por exemplo, Londres ou Alta Costura">
+						</form>					
+				</div>
+				<div id = "NomeDaPasta" style = "margin-top:8%;position: relative; background-color:white;height:8%; width:100%;">
+						<h3 style = "color: black; font-size:16px; margin-top:2%; margin-left:3%; position: absolute; ">Descrição:</h3>
+						<form id="inputform2" onsubmit="return false;"> 
+						<textarea name="textarea"; rows="5"; style="position:absolute; margin-left:22%;border-color: black; border-style: solid; border-width: 2px; width: 70%;"placeholder="Insira palavras que descrevam o conteúdo da sua pasta"></textarea>						
+						</form>					
+				</div>
+				<div id = "NomeDaPasta" style = "margin-top:22%;position: relative; background-color:white;height:8%; width:100%;">
+						<h3 style = "color: black; font-size:16px; margin-top:2%; margin-left:3%; position: absolute; ">Categoria:</h3>
+				<select id = "Opcoes"; style="position:absolute; margin-top:1%; margin-left:22%;border-color: black; border-style: solid; border-width: 2px; width: 71.5%; height: 70%;" >
+					<option selected disabled hidden >User</option> 					
+					<option id="op1" style = "display: none;" onclick="ChangeTitlle('op1')" ;></option>
+					<option id="op2" style = "display: none;" onclick="ChangeTitlle('op2')"; ></option>
+					<option id="op3" style = "display: none;" onclick="ChangeTitlle('op3')" ;></option>
+					<option id="op4" style = "display: none;" onclick="ChangeTitlle('op4')" ; ></option>
+					<option id="op5" style = "display: none;" onclick="ChangeTitlle('op5')"></option>
+					<option id="op6" style = "display: none;" onclick="ChangeTitlle('op6')"></option>
+					<option id="op7" style = "display: none;" onclick="ChangeTitlle('op7')"></option>
+					<option id="op8" style = "display: none;" onclick="ChangeTitlle('op8')"></option>
+					<option id="op9" style = "display: none;" onclick="ChangeTitlle('op9')"></option>
+				</select>				
+				</div>
+				<div style="width: 93%; height: 0.5%; background-color: #4D4D4D;margin: auto; margin-top: 7%; position: relative; " ></div>
+				<div id="CancelarJanelaEditar" onclick="SairJanelaEditar()"; style = "position: relative; width: 21%; height: 6%; margin-left: 45%; margin-top: 3%; background-color:#CCCCCC; cursor:pointer; border-style: solid; border-width: 2px; border-color: #808080; " ; onclick="">
+					<h3 id="" style=" position: relative;margin: 4% 17%; font-size: 15px;";  >Cancelar</h3>		
+				</div>
+				<div id="ConfirmarJanelaEditar" style = "position: relative; width: 21%; height: 6%; margin-left: 75%; margin-top: -6.4%; background-color:#CCCCCC; cursor:pointer; border-style: solid; border-width: 2px; border-color: #808080; " onclick="">
+					<h3 style=" position: relative;margin: 4% 40%; font-size: 15px;" id="">Ok</h3>		
+				</div>			
+			</div>
+		</div>
+<! --------Fim Menu Editar Pasta -------------------->
+
+							
+		<div id = "TelaPasta" style = "overflow:visible;background-color: white; position: absolute;margin-left: 32%;height: 100%; width :68%;  overflow-y: scroll;">
+				<div style = "width: 100%; height: 10% ;position: absolute;"	>
+				<h3 style= "color: black; font-size: 31px; margin-top: 3.5%; margin-left: 10%; ">Pastas visíveis no menu User</h3></div>
+				<div class ="divVisualizarFolder" ; style = "margin-top:10%;background-color: white">
+					<h3 style = "position: relative; margin-top:1.8%;margin-left:10%;font-size:30px;">1.</h3>
+					<h3 class = "VisualizarTitle"style = "">Estampa Verão 2019</h3>
+					<div class="VisualizarImgOlho">
+						<img src="images/VisualizarFolder_Enable.png"; onclick="" style = "position: absolute; width:33px; height:33px;margin-left: 10%;margin-top:8%;"></div>
+				</div>
+				
+				<div class ="divVisualizarFolder" style = "margin-top:15.3%;background-color: white">
+				<h3 style = "position: relative; margin-top:1.8%;margin-left:10%;font-size:30px;">2.</h3>
+					<h3 class = "VisualizarTitle"style = "">Estampa Verão 2018</h3>
+					<div class="VisualizarImgOlho">
+						<img src="images/VisualizarFolder_Enable.png"; onclick="" style = "position: absolute; width:33px; height:33px;margin-left: 10%;margin-top:8%;"></div>
+				</div>
+				
+				<div class ="divVisualizarFolder"style = "margin-top:20.6%;background-color: white">
+				<h3 style = "position: relative; margin-top:1.8%;margin-left:10%;font-size:30px;">3.</h3>
+					<h3 class = "VisualizarTitle"style = "">Estampa Verão 2019</h3>
+					<div class="VisualizarImgOlho">
+						<img src="images/VisualizarFolder_Enable.png"; onclick="" style = "position: absolute; width:33px; height:33px;margin-left: 10%;margin-top:8%;"></div>
+				</div>
+				<div class ="divVisualizarFolder"style = "margin-top:25.9%;">
+				<h3 style = "position: relative; margin-top:1.8%;margin-left:10%;font-size:30px;">4.</h3>
+					<h3 class = "VisualizarTitle"style = "">Estampa Verão 2019</h3>
+					<div class="VisualizarImgOlho">
+						<img src="images/VisualizarFolder_Enable.png"; onclick="" style = "position: absolute; width:33px; height:33px;margin-left: 10%;margin-top:8%;"></div>
+				
+				</div>
+				<div class ="divVisualizarFolder"style = "margin-top:31.2%;">
+				<h3 style = "position: relative; margin-top:1.8%;margin-left:10%;font-size:30px;">5.</h3>
+					<h3 class = "VisualizarTitle"style = "">Estampa Verão 2019</h3>
+					<div class="VisualizarImgOlho">
+						<img src="images/VisualizarFolder_Enable.png"; onclick="" style = "position: absolute; width:33px; height:33px;margin-left: 10%;margin-top:8%;"></div>
+				
+				</div>
+				<div class ="divVisualizarFolder"style = "margin-top:36.5%;">
+				<h3 style = "position: relative; margin-top:1.8%;margin-left:10%;font-size:30px;">6.</h3>
+					<h3 class = "VisualizarTitle"style = "">Estampa Verão 2019</h3>
+					<div class="VisualizarImgOlho">
+						<img src="images/VisualizarFolder_Enable.png"; onclick="" style = "position: absolute; width:33px; height:33px;margin-left: 10%;margin-top:8%;"></div>
+				
+				</div>
+				<div class ="divVisualizarFolder" style = "margin-top:41.8%;">
+				<h3 style = "position: relative; margin-top:1.8%;margin-left:10%;font-size:30px;">7.</h3>
+					<h3 class = "VisualizarTitle"style = "">Estampa Verão 2019</h3>
+					<div class="VisualizarImgOlho">
+						<img src="images/VisualizarFolder_Enable.png"; onclick="" style = "position: absolute; width:33px; height:33px;margin-left: 10%;margin-top:8%;"></div>
+				
+				</div>
+				<div class ="divVisualizarFolder"style = "margin-top:47.1%;">
+				<h3 style = "position: relative; margin-top:1.8%;margin-left:10%;font-size:30px;">8.</h3>
+					<h3 class = "VisualizarTitle"style = "">Estampa Verão 2019</h3>
+					<div class="VisualizarImgOlho">
+						<img src="images/VisualizarFolder_Enable.png"; onclick="" style = "position: absolute; width:33px; height:33px;margin-left: 10%;margin-top:8%;"></div>
+				
+				</div>
+				<div class ="divVisualizarFolder" style = "margin-top:52.4%;">
+				<h3 style = "position: relative; margin-top:1.8%;margin-left:10%;font-size:30px;">9.</h3>
+					<h3 class = "VisualizarTitle"style = "">Estampa Verão 2019</h3>
+					<div class="VisualizarImgOlho">
+						<img src="images/VisualizarFolder_Enable.png"; onclick="" style = "position: absolute; width:33px; height:33px;margin-left: 10%;margin-top:8%;"></div>
+				
+				</div>
+				<div class ="divVisualizarFolder" style = "margin-top:57.7%;">
+				<h3 style = "position: relative; margin-top:1.8%;margin-left:8.5%;font-size:30px;">10.</h3>
+					<h3 class = "VisualizarTitle"style = "">Estampa Verão 2019</h3>
+					<div class="VisualizarImgOlho">
+						<img src="images/VisualizarFolder_Enable.png"; onclick="" style = "position: absolute; width:33px; height:33px;margin-left: 10%;margin-top:8%;"></div>
+				
+				</div>
+		</div>
+							
+</body>
+
+
+<style type="text/css">
+
+select[disabled]{
+background-color: red;}
+
+* {
+    font-family: 'Raleway';
+}
+.divVisualizarFolder{
+width: 100%;
+height: 7%;
+position: absolute;
+overflow: hidden;
+}
+.VisualizarTitle{
+position: relative; 
+margin-top:-6.3%;
+margin-left:13%;
+font-size:20px;
+z-index: 2;
+}
+.VisualizarTitle::after{
+    content:"";
+    vertical-align:middle;
+    display:inline-block;
+    width:90%;
+    border-bottom:2px dotted #8c8c8c;    
+}
+.VisualizarTitle:after {
+     margin:0 -60% -1% 1%;
+}
+.VisualizarImgOlho{
+background-color:white;
+width: 10%;
+height: 100%;
+margin-left: 90%;
+margin-top: -7%;
+position: relative;
+z-index: 2;
+}
+
+    
+</style>	
+<html>

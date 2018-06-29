@@ -1,0 +1,44 @@
+
+const neo4j = require('neo4j-driver').v1;
+const driver = neo4j.driver('bolt://localhost:7687', neo4j.auth.basic('neo4j', 'senhaslots'));
+const session = driver.session();
+
+/* GET home page. */
+ 
+const resultPromise = session.run('MATCH (u:SubCategoria {Nome:"Blusa"}) ,(k:ExcluidosUSUARIO_1)\n Unwind (k.ID_Artigo) as x \n Unwind (u.ID_ARTIGOS) as y \n return toString(size(u.ID_ARTIGOS)), toString(y), toString(size(k.ID_Artigo)),toString(x)');
+
+  readTxPromise.then(result =>{
+    session.close();
+			var Vector=[1,2];
+			var indice = 0;
+			var Tamanhos = result.records[0];
+	  		var Tamanho = Tamanhos.get(0);
+	  		var VectorExlcuidos = [0,1];
+			var IndiceExcluidos = 0;
+			var TamanhosExcluidos = result.records[0];
+	  		var TamanhoExcluido = TamanhosExcluidos.get(2);
+	  		var Anterior  =  23;
+	  		var Index  = 0;
+			while (indice <Tamanho){
+				var Ids = result.records[indice];
+	  			var Idl = Ids.get(1);
+				Vector[indice] = Idl;			
+				indice = indice+1;
+			}
+			
+	  		
+			while (Index<TamanhoExcluido){
+				var Excluidos = result.records[Tamanho*(TamanhoExcluido-Index-1)];
+		  		var Excluido = Excluidos.get(3);				
+				VectorExlcuidos[Index] = Excluido;
+				Index = Index + 1;
+			}
+			
+			 var Resultado = Vector.filter(function (element, index, array) {
+            if(VectorExlcuidos.indexOf(element) == -1)
+                return element;
+        });
+				console.log(Resultado);
+    			next();   
+				});		
+

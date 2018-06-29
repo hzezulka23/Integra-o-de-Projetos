@@ -1,0 +1,450 @@
+<!doctype html>
+
+<html>
+	<head>
+		
+		<title> SLOTSFASHION - USER</title>
+		<meta charset = "utf-8" />
+		<meta name = "description" content = " Software de criação para moda" />
+		<meta name = "keywords" content = "moda, criação,ideia" />
+		<meta name="author" content="hzm" />
+		<link rel = "stylesheet" type="text/css" href = "stylesheets/estilo.css" />
+		<link rel = "stylesheet" type="text/css" href = "stylesheets/normalize.css" />
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet"/>
+		<script src="javascripts/main.js"></script>
+		<script src="javascripts/user.js"></script>	
+		<script src="javascripts/Transactions.js"></script>
+		<script src="javascripts/temporario.js"></script>		
+		<script src ="javascripts/jquery-3.3.1.js"></script>	
+		
+		
+	</head>
+	
+<body>
+<!--------Menu A Esquerda -------------------->																																																																																																																																																																																																								
+	<div style = "z-index: -1;background-color: black;position: absolute; height: 100%; width : 100%; margin:0 auto; padding: 0px 0; margin-left: 0px; padding-right: 0px;">
+		<div style = "position:absolute; margin-left: 2%;margin-top:1%;height:10% ; width: 25%; background-color:;">
+		<h3 style = "color: #8C8C8C; font-size: 25px;">Andressa Schneider</h3>
+			<img src="images/Home.png" alt="" style="position:absolute; height:73% ;width: 15% ; margin-top:-20%;margin-left: 95%;" >
+		</div>
+		<div style = "position:absolute; margin-left: 2%;margin-top:12%;height:50% ; width: 25%;">
+		<div style = "width: 100%; height: 8%; background-color:black;margin-top: 20%;" > 
+			<img id = "SetaMP"src= "images/MenuEsquerda.png" alt="" style= "height:66% ;width: 3% ;" >
+			<h3 id="opcao1"; style = "color: #8C8C8C; font-size: 18px; margin-left:5%;margin-top:-6.5%; cursor: pointer "; onmouseover="Mudarcor('opcao1')"; onmouseout="Voltarcor('opcao1')"; onclick ="ShowFolderOptions()">MINHAS PASTAS</h3>;
+		</div>
+		<div id="FolderOptionsMain" style="display: none;">
+		<div id = "FolderOptions1" class = "FolderOptions"; style = "width: 100%; height: 28px; display: block; " > 
+			<img src="images/NFMini.png" alt="" style= "height:12px ;width: 12px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions1"  style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-5%; cursor: pointer;  "; >NOVA PASTA</h3>;
+		</div>
+		<div id = "FolderOptions2" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions2" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 1</h3>;
+		</div>
+		<div id = "FolderOptions3" class = "FolderOptions"; style = "width: 100%; height: 28px; display:none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions3" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 2</h3>;
+		</div>
+		<div  id = "FolderOptions4" class = "FolderOptions"; style = "width: 100%; height: 28px; display:none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions4" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 3</h3>;
+		</div>
+		<div  id = "FolderOptions5" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions5" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 4</h3>;
+		</div>
+		<div  id = "FolderOptions6" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions6" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 5</h3>;
+		</div>
+		<div  id = "FolderOptions7" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions7" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 6</h3>;
+		</div>
+		<div  id = "FolderOptions8" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions8" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 7</h3>;
+		</div>
+		<div  id = "FolderOptions9" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions9" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 8</h3>;
+		</div>
+		<div  id = "FolderOptions10" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions10" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 9</h3>;
+		</div>
+			<div  id = "FolderOptions11" class = "FolderOptions"; style = "width: 100%; height: 28px; display: none;" > 
+			<img src="images/MenuEsquerda.png" alt="" style= "height:18px ;width: 9px ; margin-left:12%; " >
+			<h3 id ="HFolderOptions11" style = "color: #8C8C8C; font-size: 15px; margin-left:18%;margin-top:-6%; cursor: pointer "; >NOVA PASTA 10</h3>;
+		</div>
+		</div>
+		<div style = "width: 100%; height: 8%; background-color:black;margin-top: 0% " > 			
+			<img src="images/MenuEsquerda.png" alt="" style= "height:66% ;width: 3%;margin-top:8%;" >			
+			<h3 id="opcao3" style = "color: #8C8C8C;font-size: 18px; margin-left:5%;margin-top:-6.8%;cursor: pointer "; onmouseover="Mudarcor('opcao3')"; onmouseout="Voltarcor('opcao3')"; onclick="GotoCreatedFolderPage()">MEUS DADOS</h3>;
+		</div>
+		<div style = "width: 100%; height: 8%; background-color:black;margin-top: 0% " > 	
+			<img src="images/MenuEsquerda.png" alt="" style= "height:66% ;width: 3%;margin-top:15%;" >			
+			<h3 id="opcao4" style = "color: #8C8C8C;font-size: 18px; margin-left:5%;margin-top:-6.5%; cursor: pointer "; onmouseover="Mudarcor('opcao4')"; onmouseout="Voltarcor('opcao4')"; onclick="GotoEnabledFoldersPage()">PLANOS DE ASSINATURA</h3>;
+		</div>		
+		<div style = "width: 100%; height: 8%; background-color:black;margin-top: 0% " > 						
+			<h3 id="opcao5" style = "color: #8C8C8C;font-size: 18px;margin-left:5%;margin-top:21%;cursor: pointer "; onmouseover="Mudarcor('opcao5')"; onmouseout="Voltarcor('opcao5')" ; onclick="GotoMainPage()" >SAIR</h3>;		
+		</div>
+		</div>
+
+<! --------Menu Editar Pasta --------------------->
+
+		<div id = "MainEditar" style = "display:none;background-color: rgba(255,255,255,0.7); position: fixed;height: 100%; width :100%; z-index: 6;">
+			<div id = "CaixaDialago" style = "margin:auto; margin-top:130px; background-color: white;height: 59%; width :33.5%; border-style: solid; ">
+				<div id = "CaixaDialago" style = " background-color:black;height:7%; width:100%;">
+					<h3 style = "color: white; font-size:18px; margin-top:0.4%; margin-left:1%; position: absolute; ">Editar Pasta</h3>
+					<img src="images/x_branco.png"; onclick="SairJanelaEditar()" style = "position: absolute; width:14px; height:14px;margin-left: 31%;margin-top:0.5%;">				
+				</div>
+				<div id = "NomeDaPasta" style = "margin-top:13%;position: relative; background-color:white;height:8%; width:100%;">
+						<h3 style = "color: black; font-size:16px; margin-top:2%; margin-left:3%; position: absolute; ">Nome:</h3>
+						<form id="inputform2" onsubmit="return false;"> 
+						<input class="input"; type= "text"; id="input2"; style="overflow:visible; position:absolute; margin-left:22%;border-color: black; border-style: solid; border-width: 2px; width: 70%; height: 70%;"; placeholder=" Por exemplo, Londres ou Alta Costura">
+						</form>					
+				</div>
+				<div id = "NomeDaPasta" style = "margin-top:8%;position: relative; background-color:white;height:8%; width:100%;">
+						<h3 style = "color: black; font-size:16px; margin-top:2%; margin-left:3%; position: absolute; ">Descrição:</h3>
+						<form id="inputform2" onsubmit="return false;"> 
+						<textarea name="textarea"; rows="5"; style="position:absolute; margin-left:22%;border-color: black; border-style: solid; border-width: 2px; width: 70%;"placeholder="Insira palavras que descrevam o conteúdo da sua pasta"></textarea>						
+						</form>					
+				</div>
+				<div id = "NomeDaPasta" style = "margin-top:22%;position: relative; background-color:white;height:8%; width:100%;">
+						<h3 style = "color: black; font-size:16px; margin-top:2%; margin-left:3%; position: absolute; ">Categoria:</h3>
+				<select id = "Opcoes"; style="position:absolute; margin-top:1%; margin-left:22%;border-color: black; border-style: solid; border-width: 2px; width: 71.5%; height: 70%;" >
+					<option selected disabled hidden >User</option> 					
+					<option id="op1" style = "display: none;" onclick="ChangeTitlle('op1')" ;></option>
+					<option id="op2" style = "display: none;" onclick="ChangeTitlle('op2')"; ></option>
+					<option id="op3" style = "display: none;" onclick="ChangeTitlle('op3')" ;></option>
+					<option id="op4" style = "display: none;" onclick="ChangeTitlle('op4')" ; ></option>
+					<option id="op5" style = "display: none;" onclick="ChangeTitlle('op5')"></option>
+					<option id="op6" style = "display: none;" onclick="ChangeTitlle('op6')"></option>
+					<option id="op7" style = "display: none;" onclick="ChangeTitlle('op7')"></option>
+					<option id="op8" style = "display: none;" onclick="ChangeTitlle('op8')"></option>
+					<option id="op9" style = "display: none;" onclick="ChangeTitlle('op9')"></option>
+				</select>				
+				</div>
+				<div style="width: 93%; height: 0.5%; background-color: #4D4D4D;margin: auto; margin-top: 7%; position: relative; " ></div>
+				<div id="CancelarJanelaEditar" onclick="SairJanelaEditar()"; style = "position: relative; width: 21%; height: 6%; margin-left: 45%; margin-top: 3%; background-color:#CCCCCC; cursor:pointer; border-style: solid; border-width: 2px; border-color: #808080; " ; onclick="">
+					<h3 id="" style=" position: relative;margin: 4% 17%; font-size: 15px;";  >Cancelar</h3>		
+				</div>
+				<div id="ConfirmarJanelaEditar" style = "position: relative; width: 21%; height: 6%; margin-left: 75%; margin-top: -6.4%; background-color:#CCCCCC; cursor:pointer; border-style: solid; border-width: 2px; border-color: #808080; " onclick="">
+					<h3 style=" position: relative;margin: 4% 40%; font-size: 15px;" id="">Ok</h3>		
+				</div>			
+			</div>
+		</div>
+<! --------Fim Menu Editar Pasta -------------------->
+
+							
+		<div id = "TelaPasta" style = "overflow:visible;background-color: white; position: absolute;margin-left: 32%;height: 100%; width :68%;  overflow-y: scroll;">
+			
+		  <div id ="FirstBackFolder" ; class = 'BackFolder' ; style = "cursor: default;margin-left: 5%; margin-top: 4%;display:block;" >
+				<div class="DivImgs" onclick="CreateNewFolder()"style = "cursor:pointer;"> <img  src="images/CreateButton.png" style = "display:block; margin: auto; margin-top:11.7%;width:81px; height: 81px; "></div>
+				<div class="DivMenus">
+					<img class = "IconesMenuFolder" src="images/VisualizarFolder_off.png" style = "margin-left: 50%;margin-top:30%;">
+					<img class = "IconesMenuFolder" src="images/EditarFolder_Disable.png" onclick=""; style = "margin-left: 50%;margin-top:100%;">
+					<img class = "IconesMenuFolder" src="images/DownloadFolder_Disable.png" style = "margin-left: 50%;margin-top:170%;">
+				</div>
+		  		<h3 class="TitulosDasPastas"  style = "color:#4D4D4D;font-size: 16px;margin-top: 70%; ";>Nova Pasta</h3>	
+		  </div>
+		  
+		  
+		  
+		  <div id ="BackFolder1" ; class = 'BackFolder' ; onclick=""; style = "margin-left:43.2%; margin-top: 4%;" >		  	
+				<div class="DivImgs"></div>
+				<div class="DivMenus">
+					<img id = "Visualizar1"; onclick="ChangeIconesDivMenu('Visualizar1')"; class = "IconesMenuFolder" src="images/VisualizarFolder_Disable.png" style = "margin-left: 50%;margin-top:30%;">
+					<img id = "Editar1"; onclick="ChangeIconesDivMenu('Editar1');EntrarJanelaEditar()";  class = "IconesMenuFolder" src="images/EditarFolder_Disable.png" style = "margin-left: 50%;margin-top:100%;">
+					<img id = "Download1"; onclick="ChangeIconesDivMenu('Download1')"; class = "IconesMenuFolder" src="images/DownloadFolder_Disable.png" style = "margin-left: 50%;margin-top:170%;">
+				</div>
+				<div style ="width:50%;height:21%;margin-top:55%;position:absolute; "><h3 class="TitulosDasPastas" id="TitulosDasPastas1"onclick="InputAppers('Divform1')";>Estampa Verão 2019</h3></div>
+		  		<div style ="width:68%;height:11%;margin-top:71%;position:absolute; ">
+		  		<h3 class="ValoresDaPasta" id="ValoresDaPasta1" style= "color:#4D4D4D;font-size: 15px;margin-top: 2%;";>1 subpasta e 10 imagens</h3>		  		
+		  		<div  class="Divform"; id="Divform1"; style = "position:absolute; background-color:white; margin-left: -5%; margin-top: -36%; width:100%; height: 100%; display: none; z-index: 5;">
+					<form id="inputform1" onsubmit="return false;"> 
+					<input class="input"; type= "text"; id="input1"; style="overflow:visible; position:absolute; z-index:4 ;border-color: black; border-style: solid; border-width: 2px; width: 100%;">
+					</form>		 
+		  		</div>
+		  		</div>						
+		  </div>
+		  
+		  <div id ="BackFolder2" ; class = 'BackFolder' ; onclick=""; style = "margin-left: 5%; margin-top: 35.5%;" >
+		  			<div class="DivImgs">
+				</div>
+				<div class="DivMenus">
+				<img id = "Visualizar2"; onclick="ChangeIconesDivMenu('Visualizar2')"; class = "IconesMenuFolder" src="images/VisualizarFolder_Disable.png" style = "margin-left: 50%;margin-top:30%;">
+				<img id = "Editar2"; onclick="ChangeIconesDivMenu('Editar2');EntrarJanelaEditar()";   class = "IconesMenuFolder" src="images/EditarFolder_Disable.png" style = "margin-left: 50%;margin-top:100%;">
+				<img id = "Download2"; onclick="ChangeIconesDivMenu('Download2')"; class = "IconesMenuFolder" src="images/DownloadFolder_Disable.png" style = "margin-left: 50%;margin-top:170%;">
+				</div>
+		  		<div style ="width:50%;height:21%;margin-top:55%;position:absolute; "><h3 class="TitulosDasPastas" id="TitulosDasPastas2"; onclick="InputAppers('Divform2')";>Nova Pasta 2</h3></div>
+		  		<div style ="width:68%;height:11%;margin-top:71%;position:absolute; ">
+		  		<h3 class="ValoresDaPasta" id="ValoresDaPasta2" style= "color:#4D4D4D;font-size: 15px;margin-top: 2%;";>0 subpasta e 0 imagens</h3>	
+		  	 	<div class = 'Divform'; id="Divform2"; style = "position:absolute; background-color:white; margin-left: -5%; margin-top: -36%; width:100%; height: 100%; display: none; z-index: 5;">
+					<form id="inputform2" onsubmit="return false;"> 
+					<input class="input"; type= "text"; id="input2"; style="overflow:visible; position:absolute; z-index:4 ;border-color: black; border-style: solid; border-width: 2px; width: 100%;">
+					</form>		 
+		  		</div>
+		  		</div>						
+		  </div>
+		  <div id ="BackFolder3" ; class = 'BackFolder' ; onclick=""; style = "margin-left:43.2%; margin-top: 35.5%;" >		  	
+		  	 		<div class="DivImgs">
+				</div>
+				<div class="DivMenus">
+				<img id = "Visualizar3"; onclick="ChangeIconesDivMenu('Visualizar3')"; class = "IconesMenuFolder" src="images/VisualizarFolder_Disable.png" style = "margin-left: 50%;margin-top:30%;">
+				<img id = "Editar3"; onclick="ChangeIconesDivMenu('Editar3');EntrarJanelaEditar()";  class = "IconesMenuFolder" src="images/EditarFolder_Disable.png" style = "margin-left: 50%;margin-top:100%;">
+				<img id = "Download3"; onclick="ChangeIconesDivMenu('Download3')"; class = "IconesMenuFolder" src="images/DownloadFolder_Disable.png" style = "margin-left: 50%;margin-top:170%;">
+				</div>
+		  		<div style ="width:50%;height:21%;margin-top:55%;position:absolute; "><h3 class="TitulosDasPastas" id="TitulosDasPastas3"; onclick="InputAppers('Divform3')">Nova Pasta 3</h3></div>
+		  		<div style ="width:68%;height:11%;margin-top:71%;position:absolute; ">
+		  		<h3 class="ValoresDaPasta" id="ValoresDaPasta3" style= "color:#4D4D4D;font-size: 15px;margin-top: 2%;";>0 subpasta e 0 imagens</h3>	
+		  	 	<div class = 'Divform'; id="Divform3"; style = "position:absolute; background-color:white; margin-left: -5%; margin-top: -36%; width:100%; height: 100%; display: none; z-index: 5;">
+					<form id="inputform3" onsubmit="return false;"> 
+					<input  class="input"; type= "text"; id="input3"; style="overflow:visible; position:absolute; z-index:4 ;border-color: black; border-style: solid; border-width: 2px; width: 100%;">
+					</form>		 
+		  		</div>
+		  		</div>				
+		  </div>
+		  
+		  <div id ="BackFolder4" ; class = 'BackFolder' ; onclick=""; style = "margin-left: 5%; margin-top: 66.7%;" >
+		  			<div class="DivImgs">
+				</div>
+				<div class="DivMenus">
+				<img id = "Visualizar4"; onclick="ChangeIconesDivMenu('Visualizar4')"; class = "IconesMenuFolder" src="images/VisualizarFolder_Disable.png" style = "margin-left: 50%;margin-top:30%;">
+				<img id = "Editar4"; onclick="ChangeIconesDivMenu('Editar4');EntrarJanelaEditar()";  class = "IconesMenuFolder" src="images/EditarFolder_Disable.png" style = "margin-left: 50%;margin-top:100%;">
+				<img id = "Download4"; onclick="ChangeIconesDivMenu('Download4')"; class = "IconesMenuFolder" src="images/DownloadFolder_Disable.png" style = "margin-left: 50%;margin-top:170%;">
+				</div>
+		  		<div style ="width:50%;height:21%;margin-top:55%;position:absolute; "><h3 class="TitulosDasPastas" id="TitulosDasPastas4"; onclick="InputAppers('Divform4')">Nova Pasta 4</h3></div>
+		  		<div style ="width:68%;height:11%;margin-top:71%;position:absolute; ">
+		  		<h3 class="ValoresDaPasta" id="ValoresDaPasta4" style= "color:#4D4D4D;font-size: 15px;margin-top: 2%;";>0 subpasta e 0 imagens</h3>
+		  	 	<div class = 'Divform'; id="Divform4"; style = "position:absolute; background-color:white; margin-left: -5%; margin-top: -36%; width:100%; height: 100%; display: none; z-index: 5;">
+					<form id="inputform4" onsubmit="return false;"> 
+					<input class="input"; type= "text"; id="input4"; style="overflow:visible; position:absolute; z-index:4 ;border-color: black; border-style: solid; border-width: 2px; width: 100%;">
+					</form>		 
+		  		</div>
+		  		</div>						
+		  </div>
+		  <div id ="BackFolder5" ; class = 'BackFolder' ; onclick=""; style = "margin-left:43.2%; margin-top: 66.7%;" >		  	
+		  	 		<div class="DivImgs">
+				</div>
+				<div class="DivMenus">
+				<img id = "Visualizar5"; onclick="ChangeIconesDivMenu('Visualizar5')"; class = "IconesMenuFolder" src="images/VisualizarFolder_Disable.png" style = "margin-left: 50%;margin-top:30%;">
+				<img id = "Editar5"; onclick="ChangeIconesDivMenu('Editar5');EntrarJanelaEditar()";  class = "IconesMenuFolder" src="images/EditarFolder_Disable.png" style = "margin-left: 50%;margin-top:100%;">
+				<img id = "Download5"; onclick="ChangeIconesDivMenu('Download5')"; class = "IconesMenuFolder" src="images/DownloadFolder_Disable.png" style = "margin-left: 50%;margin-top:170%;">
+				</div>
+		  		<div style ="width:50%;height:21%;margin-top:55%;position:absolute; "><h3 class="TitulosDasPastas" id="TitulosDasPastas5"; onclick="InputAppers('Divform5')">Nova Pasta 5</h3></div>
+		  		<div style ="width:68%;height:11%;margin-top:71%;position:absolute; ">
+		  		<h3 class="ValoresDaPasta" id="ValoresDaPasta5" style= "color:#4D4D4D;font-size: 15px;margin-top: 2%;";>0 subpasta e 0 imagens</h3>
+		  	 	<div class = 'Divform'; id="Divform5"; style = "position:absolute; background-color:white; margin-left: -5%; margin-top: -36%; width:100%; height: 100%; display: none; z-index: 5;">
+					<form id="inputform5" onsubmit="return false;"> 
+					<input  class="input"; type= "text"; id="input5"; style="overflow:visible; position:absolute; z-index:4 ;border-color: black; border-style: solid; border-width: 2px; width: 100%;">
+					</form>		 
+		  		</div>
+		  		</div>				
+		  </div>
+		 <div id ="BackFolder6" ; class = 'BackFolder' ; onclick=""; style = "margin-left: 5%; margin-top: 98%;" >
+			<div class="DivImgs">
+				</div>
+				<div class="DivMenus">
+				<img id = "Visualizar6"; onclick="ChangeIconesDivMenu('Visualizar6')"; class = "IconesMenuFolder" src="images/VisualizarFolder_Disable.png" style = "margin-left: 50%;margin-top:30%;">
+				<img id = "Editar6"; onclick="ChangeIconesDivMenu('Editar6');EntrarJanelaEditar()";  class = "IconesMenuFolder" src="images/EditarFolder_Disable.png" style = "margin-left: 50%;margin-top:100%;">
+				<img id = "Download6"; onclick="ChangeIconesDivMenu('Download6')"; class = "IconesMenuFolder" src="images/DownloadFolder_Disable.png" style = "margin-left: 50%;margin-top:170%;">
+				</div>
+		  		<div style ="width:50%;height:21%;margin-top:55%;position:absolute; "><h3 class="TitulosDasPastas" id="TitulosDasPastas6"; onclick="InputAppers('Divform6')">Nova Pasta 6</h3></div>
+		  		<div style ="width:68%;height:11%;margin-top:71%;position:absolute; ">
+		  		<h3 class="ValoresDaPasta" id="ValoresDaPasta6" style= "color:#4D4D4D;font-size: 15px;margin-top: 2%;";>0 subpasta e 0 imagens</h3>
+		  	 	<div class = 'Divform'; id="Divform6"; style = "position:absolute; background-color:white; margin-left: -5%; margin-top: -36%; width:100%; height: 100%; display: none; z-index: 5;">
+					<form id="inputform6" onsubmit="return false;"> 
+					<input class="input"; type= "text"; id="input6"; style="overflow:visible; position:absolute; z-index:4 ;border-color: black; border-style: solid; border-width: 2px; width: 100%;">
+					</form>		 
+		  		</div>
+		  		</div>						
+		  </div>
+		  
+		  <div id ="BackFolder7" ; class = 'BackFolder' ; onclick=""; style = "margin-left:43.2%; margin-top: 98%;" >		  	
+		  	 		<div class="DivImgs">
+		  	 		
+				</div>
+				<div class="DivMenus">
+				<img id = "Visualizar7"; onclick="ChangeIconesDivMenu('Visualizar7')"; class = "IconesMenuFolder" src="images/VisualizarFolder_Disable.png" style = "margin-left: 50%;margin-top:30%;">
+				<img id = "Editar7"; onclick="ChangeIconesDivMenu('Editar7');EntrarJanelaEditar()";  class = "IconesMenuFolder" src="images/EditarFolder_Disable.png" style = "margin-left: 50%;margin-top:100%;">
+				<img id = "Download7"; onclick="ChangeIconesDivMenu('Download7')"; class = "IconesMenuFolder" src="images/DownloadFolder_Disable.png" style = "margin-left: 50%;margin-top:170%;">
+				</div>
+		  		<div style ="width:50%;height:21%;margin-top:55%;position:absolute; "><h3 class="TitulosDasPastas" id="TitulosDasPastas7"; onclick="InputAppers('Divform7')">Nova Pasta 7</h3></div>
+		  		<div style ="width:68%;height:11%;margin-top:71%;position:absolute; ">
+		  		<h3 class="ValoresDaPasta" id="ValoresDaPasta7" style= "color:#4D4D4D;font-size: 15px;margin-top: 2%;";>0 subpasta e 0 imagens</h3>
+		  	 	<div class = 'Divform'; id="Divform7"; style = "position:absolute; background-color:white; margin-left: -5%; margin-top: -36%; width:100%; height: 100%; display: none; z-index: 5;">
+					<form id="inputform7" onsubmit="return false;"> 
+					<input  class="input"; type= "text"; id="input7"; style="overflow:visible; position:absolute; z-index:4 ;border-color: black; border-style: solid; border-width: 2px; width: 100%;">
+					</form>		 
+		  		</div>
+		  		</div>				
+		  </div>
+		  
+		   	 <div id ="BackFolder8" ; class = 'BackFolder' ; onclick=""; style = "margin-left: 5%; margin-top: 129.5%; " >
+		  			<div class="DivImgs">
+				</div>
+				<div class="DivMenus">
+				<img id = "Visualizar8"; onclick="ChangeIconesDivMenu('Visualizar8')"; class = "IconesMenuFolder" src="images/VisualizarFolder_Disable.png"; onclick="ChangeIconesDivMenu()" style = "margin-left: 50%;margin-top:30%;">
+				<img id = "Editar8"; onclick="ChangeIconesDivMenu('Editar8');EntrarJanelaEditar()";  class = "IconesMenuFolder" src="images/EditarFolder_Disable.png" style = "margin-left: 50%;margin-top:100%;">
+				<img id = "Download8"; onclick="ChangeIconesDivMenu('Download8')"; class = "IconesMenuFolder" src="images/DownloadFolder_Disable.png" style = "margin-left: 50%;margin-top:170%;">
+				</div>
+		  		<div style ="width:50%;height:21%;margin-top:55%;position:absolute; "><h3 class="TitulosDasPastas" id="TitulosDasPastas8"; onclick="InputAppers('Divform8')";>Nova Pasta 8</h3></div>
+		  		<div style ="width:68%;height:11%;margin-top:71%;position:absolute; ">
+		  		<h3 class="ValoresDaPasta" id="ValoresDaPasta8" style= "color:#4D4D4D;font-size: 15px;margin-top: 2%;";>0 subpasta e 0 imagens</h3>	
+		  	 	<div class = 'Divform'; id="Divform8"; style = "position:absolute; background-color:white; margin-left: -5%; margin-top: -36%; width:100%; height: 100%; display: none; z-index: 5;">
+					<form id="inputform8" onsubmit="return false;"> 
+					<input class="input"; type= "text"; id="input8"; style="overflow:visible; position:absolute; z-index:4 ;border-color: black; border-style: solid; border-width: 2px; width: 100%;">
+					</form>		 
+		  		</div>
+		  		</div>						
+		  </div>
+		  
+		  <div id ="BackFolder9" ; class = 'BackFolder' ; onclick=""; style = "margin-left:43.2%; margin-top: 129.5%;" >		  	
+		  	 		<div class="DivImgs">
+				</div>
+				<div class="DivMenus">
+				<img id = "Visualizar9"; onclick="ChangeIconesDivMenu('Visualizar9')"; class = "IconesMenuFolder" src="images/VisualizarFolder_Disable.png" style = "margin-left: 50%;margin-top:30%;">
+				<img id = "Editar9"; onclick="ChangeIconesDivMenu('Editar9');EntrarJanelaEditar()";  class = "IconesMenuFolder" src="images/EditarFolder_Disable.png" style = "margin-left: 50%;margin-top:100%;">
+				<img id = "Download9"; onclick="ChangeIconesDivMenu('Download9')"; class = "IconesMenuFolder" src="images/DownloadFolder_Disable.png" style = "margin-left: 50%;margin-top:170%;">
+				</div>
+		  		<div style ="width:50%;height:21%;margin-top:55%;position:absolute; "><h3 class="TitulosDasPastas" id="TitulosDasPastas9"; onclick="InputAppers('Divform9')">Nova Pasta 9</h3></div>
+		  		<div style ="width:68%;height:11%;margin-top:71%;position:absolute; ">
+		  		<h3 class="ValoresDaPasta" id="ValoresDaPasta9" style= "color:#4D4D4D;font-size: 15px;margin-top: 2%;";>0 subpasta e 0 imagens</h3>
+		  	 	<div class = 'Divform'; id="Divform9"; style = "position:absolute; background-color:white; margin-left: -5%; margin-top: -36%; width:100%; height: 100%; display: none; z-index: 5;">
+					<form id="inputform9" onsubmit="return false;"> 
+					<input  class="input"; type= "text"; id="input9"; style="overflow:visible; position:absolute; z-index:4 ;border-color: black; border-style: solid; border-width: 2px; width: 100%;">
+					</form>		 
+		  		</div>
+		  		</div>				
+		  </div>
+		  
+		   <div id ="BackFolder10" ; class = 'BackFolder' ; onclick=""; style = "margin-left:5%; margin-top: 161%; " >		  	
+		  	 		<div class="DivImgs">
+				</div>
+				<div class="DivMenus">
+				<img id = "Visualizar10"; onclick="ChangeIconesDivMenu('Visualizar10')"; class = "IconesMenuFolder" src="images/VisualizarFolder_Disable.png" style = "margin-left: 50%;margin-top:30%;">
+				<img id = "Editar10"; onclick="ChangeIconesDivMenu('Editar10');EntrarJanelaEditar()";  class = "IconesMenuFolder" src="images/EditarFolder_Disable.png" style = "margin-left: 50%;margin-top:100%;">
+				<img id = "Download10"; onclick="ChangeIconesDivMenu('Download10')"; class = "IconesMenuFolder" src="images/DownloadFolder_Disable.png" style = "margin-left: 50%;margin-top:170%;">
+				</div>
+		  		<div style ="width:50%;height:21%;margin-top:55%;position:absolute; "><h3 class="TitulosDasPastas" id="TitulosDasPastas10"; onclick="InputAppers('Divform10')">Nova Pasta 10</h3></div>
+		  		<div style ="width:68%;height:11%;margin-top:71%;position:absolute; ">
+		  		<h3 class="ValoresDaPasta" id="ValoresDaPasta10" style= "color:#4D4D4D;font-size: 15px;margin-top: 2%;";>0 subpasta e 0 imagens</h3>
+		  	 	<div class = 'Divform'; id="Divform10"; style = "position:absolute; background-color:white; margin-left: -5%; margin-top: -36%; width:100%; height: 100%; display: none; z-index: 5;">
+					<form id="inputform10" onsubmit="return false;"> 
+					<input  class="input"; type= "text"; id="input10"; style="overflow:visible; position:absolute; z-index:4 ;border-color: black; border-style: solid; border-width: 2px; width: 100%;">
+					</form>		 
+		  		</div>
+		  		</div>				
+		  </div>
+		  
+		  
+		</div>
+		<div id="Watson">
+			<h6 class="HiddenTittleUser" id="FolderCreated"></h6>
+		</div>
+							
+</body>
+
+<script>
+var IDPASTACLICADA = 1;
+var PASTACRIADAS = 0;
+window.onload = function() {
+}
+function InputAppers(id){
+var Titulo = id.replace('Divform','');
+document.getElementById("TitulosDasPastas"+Titulo).innerHTML = "";
+var elements = document.getElementsByClassName('Divform');
+for (var i = 0; i < elements.length; i++) {
+elements[i].style.display = 'none';
+}
+document.getElementById(id).style.display ='block';
+IDPASTACLICADA = id.replace('Divform','');
+}
+
+function InputDesppers(id,id2){
+document.getElementById(id).style.display ='none';
+document.getElementById(id2).HTML ='uhum';
+}
+
+$('.input').on('keyup', function (e) {
+    if (e.keyCode == 13) {
+        document.getElementById('TitulosDasPastas'+String(IDPASTACLICADA)).innerHTML = document.getElementById("input"+String(IDPASTACLICADA)).value;
+        document.getElementById('Divform'+String(IDPASTACLICADA)).style.display ='none';
+        document.getElementById("HFolderOptions"+String(PASTACRIADAS+1)).innerHTML = document.getElementById("input"+String(IDPASTACLICADA)).value;
+    	  InserirNovasPastas(1,document.getElementById("input"+String(IDPASTACLICADA)).value,IDPASTACLICADA);	
+    }
+});
+
+function CreateNewFolder() {
+	if(PASTACRIADAS == 10){alert("Máximo de 10 Pastas")
+	}else{
+	PASTACRIADAS = PASTACRIADAS +1;	
+	document.getElementById("BackFolder"+String(PASTACRIADAS)).style.display = 'block';
+	document.getElementById("FolderOptions"+String(PASTACRIADAS+1)).style.display = 'block';
+	//DeletarPasta(1,"Folder");
+	//PastasDisponiveis(1);
+	for(var k = 0;k<PASTACRIADAS;k++){
+	MudarPosicao("BackFolder"+String(k+1),PASTACRIADAS-k-1);		
+	}} 
+		
+}
+
+function MudarPosicao(id,k) {
+var Left = [43.2,5,43.2,5,43.2,5,43.2,5,43.2,5];
+var Top = [4,35.5,35.5,66.7,66.7,98,98,129.5,129.5,161];
+document.getElementById(id).style.marginLeft = String(Left[k]) + "%";
+document.getElementById(id).style.marginTop = String(Top[k]) + "%";		
+} 
+
+</script>	
+
+<style type="text/css">
+select[disabled]{
+background-color: red;}
+
+* {
+    font-family: 'Raleway';
+}
+.TitulosDasPastas{
+margin-top: 5%; 
+font-size: 17px;
+color:black;
+position:absolute
+}
+.BackFolder{
+position: absolute;
+height: 35%;
+width: 33%;
+display: none;
+background-color: white;
+}
+.DivImgs{
+position: absolute;
+margin-top: 7%;
+height: 60%;
+width: 82%;
+display: block;
+background-color: white;
+z-index: 2;
+}
+.DivMenus{
+position: absolute;
+margin-left:70%;
+height: 100%;
+width: 30%;
+display: block;
+background-color: #8C8C8C;
+}
+.IconesMenuFolder{
+position: absolute;
+height: 31px;
+width: 31px;
+cursor: pointer;
+}
+.DivImgs{
+cursor: pointer;
+}    
+</style>	
+<html>

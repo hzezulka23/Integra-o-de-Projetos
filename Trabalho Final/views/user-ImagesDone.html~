@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html>
+	<head>
+		
+		<title> SLOTSFASHION - USER</title>
+		<meta charset = "utf-8" />
+		<meta name = "description" content = " Software de criação para moda" />
+		<meta name = "keywords" content = "moda, criação,ideia" />
+		<meta name="author" content="hzm" />
+		<link rel = "stylesheet" type="text/css" href = "stylesheets/estilo.css" />
+		<link rel = "stylesheet" type="text/css" href = "stylesheets/normalize.css" />
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet"/>
+		<script src="javascripts/main.js"></script>
+		<script src="javascripts/user.js"></script>		
+		<script src="javascripts/Transactions.js"></script>
+		<script src="javascripts/temporario.js"></script>		
+		<script src ="javascripts/jquery-3.3.1.js"></script>	
+		
+		
+	</head>
+	
+<body>																																																																																																																																																																																																								
+	<div style = "background-color: black;position: fixed; height: 100%; width : 100%; margin:0 auto; overflow: auto; padding: 0px 0; margin-left: 0px; padding-right: 0px;">
+	<div style = "position: fixed; margin-left: 2%;margin-top:12%;height:50% ; width: 20%; ">
+			<h3 id="opcao1"; style = "color: #8C8C8C; font-size: 18px; margin-top:20%; cursor: pointer "; onmouseover="Mudarcor('opcao1')"; onmouseout="Voltarcor('opcao1')"; >MINHAS PASTAS</h3>;
+			<h3 id="opcao2" style = "color: #8C8C8C;font-size: 18px; margin-top: -4%;cursor: pointer "; onmouseover="Mudarcor('opcao2')"; onmouseout="Voltarcor('opcao2')"; onclick="ChangeScreen ('MakeDir')">CRIAR NOVAS PASTAS</h3>;
+			<h3 id="opcao3" style = "color: #8C8C8C;font-size: 18px; margin-top: -4%;cursor: pointer "; onmouseover="Mudarcor('opcao3')"; onmouseout="Voltarcor('opcao3')"; onclick="ChangeScreen('ChooseFiles')">CARREGAR IMAGENS</h3>;
+			<h3 id="opcao4" style = "color: #8C8C8C;font-size: 18px; margin-top: -4%;cursor: pointer "; onmouseover="Mudarcor('opcao4')"; onmouseout="Voltarcor('opcao4')">PLANOS DE ASSINATURA</h3>;
+			<h3 id="opcao5" style = "color: #8C8C8C;font-size: 18px; margin-top: -4%;cursor: pointer "; onmouseover="Mudarcor('opcao5')"; onmouseout="Voltarcor('opcao5')" ; onclick="GotoMainPage()" >VOLTAR AO MENU PRINCIPAL</h3>;		
+		</div>			
+		<div id="TelaCarregada" style="background-color: white; position:absolute; margin-left: 32%; height: 100%; width: 100%; z-index: 5">
+			<div style= "margin-left: 8%; margin-top: 20%; height: 19%; width: 59%">
+				<h3 style="color: black; font-size: 300%; margin-top:2%; margin-left: 1%; ">Imagens carregadas com sucesso! </h3>
+				<h3 style="color: black; font-size: 120%; margin-top: -6%; margin-left: 23%; ">Você pode acessá-las no menu User da Interface.</h3>
+			</div>
+		</div>
+
+	</div>
+							
+</body>
+
+
+<style type="text/css">
+
+select[disabled]{
+background-color: red;}
+
+* {
+    font-family: 'Raleway';
+}    
+</style>	
+<html>

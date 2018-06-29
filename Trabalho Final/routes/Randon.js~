@@ -1,0 +1,7 @@
+
+export function Aleatorio(Resultado){
+var Tamanho = Resultado.length;
+var Indice = Math.floor((Math.random()*Tamanho));
+alert(Resultado[Indece]);
+return Resultado[Indece];
+}

@@ -1,0 +1,14 @@
+window.onload = function() {
+const driver = neo4j.driver('bolt://localhost:7687', neo4j.auth.basic('neo4j', 'senhaslots'));
+const session = driver.session();
+const readTxPromise = session.readTransaction(tx => tx.run('MATCH (a:Imagem{ID: $id}) RETURN a.Path', {id: 23}));
+
+  readTxPromise.then(result => {
+    session.close();
+
+    const singleRecord = result.records[0];
+    const createdNodeId = singleRecord.get(0);
+    Paths = createdNodeId; 
+	alert(Paths);
+  })		
+}

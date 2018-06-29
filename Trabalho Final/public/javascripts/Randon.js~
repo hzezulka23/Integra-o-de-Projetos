@@ -1,0 +1,6 @@
+
+function Aleatorio(Resultado){
+var Tamanho = Resultado.length;
+var Indice = Math.floor((Math.random()*Tamanho));
+return Resultado[Indece];
+}

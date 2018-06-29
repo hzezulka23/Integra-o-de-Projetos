@@ -1,0 +1,118 @@
+
+var FOLDERS = [];
+var ShowFolderOpt = false;
+
+function ShowFolderOptions(){
+var elements = document.getElementById('FolderOptionsMain');
+
+if (ShowFolderOpt==true) {
+document.getElementById("SetaMP").src = "images/MenuEsquerda.png"	
+document.getElementById("SetaMP").style.width = "3%";
+document.getElementById("SetaMP").style.height = "66%";		
+elements.style.display = 'none';
+ShowFolderOpt = false;
+}
+
+else if (ShowFolderOpt==false) {
+document.getElementById("SetaMP").src = "images/MenuEsquerdaS.png"
+document.getElementById("SetaMP").style.width = "3.6%";
+document.getElementById("SetaMP").style.height = "50%";	
+elements.style.display = 'block';
+ShowFolderOpt = true;
+}
+
+}
+
+function Mudarcor (id){
+document.getElementById(id).style.color = "white";
+}
+
+function Voltarcor (id){
+document.getElementById(id).style.color = "#8C8C8C";
+}
+function Changecolor(id) {
+
+if (document.getElementById(id).style.color == "white") {
+	document.getElementById(id).style.color = "#8C8C8C"
+}
+else{
+document.getElementById(id).style.color = "white" 
+	}
+}
+
+function ChangeScreen(id){
+	var param = ["user-",id];
+	param = param.join("");
+	window.location.replace(param);
+   SendToIndexjs(param,function(data) {
+		});
+	}
+
+
+function GotoMainPage(){
+   var param = "/";
+   window.location.replace("/");
+   SendToIndexjs(param,function(data) {
+		});
+	}
+						
+function getFile(e) {
+	var formimput = document.getElementById('upload-file');
+	var fr = new FileReader();
+	//fr.readyAsBinaryString(formimput.files[0]);
+	fr.readAsDataURL(formimput.files[0]);
+	fr.onloadend = function(e){
+		var string = e.target.result;
+		var liEle = document.getElementById('string');
+		//liEle.innerHTML = bin;
+		var img = document.getElementById('imgFile');
+		img.src = string;	
+	}}
+	
+function SaveFOLDERS() {
+		FOLDERS.push(document.getElementById("input").value);
+		alert(FOLDERS);
+		}	
+	
+function CreateByInput() {
+					alert(FOLDERS);
+						var k = 1
+						var index = FOLDERS.length + 1;
+						while (k <= index);
+						document.getElementById('op'+String(k)).style.display = "block";						
+						document.getElementById('Opcoes').options.item(k).text = FOLDERS[k];
+						CreateFolder(FOLDERS[k]);
+						document.getElementById('inputform').submit();											
+						k + 1;
+						}
+						
+function ChangeTitlle() {
+					var yourSelect = document.getElementById( "Opcoes" );
+					document.getElementById("TittleFolder").innerHTML = yourSelect.options[yourSelect.selectedIndex].value;
+					}													
+function SairJanelaEditar() {
+document.getElementById("MainEditar").style.display = 'none';
+}
+function EntrarJanelaEditar() {
+document.getElementById("MainEditar").style.display = 'block';
+}
+function ChangeIconesDivMenu(id) {
+alert(document.getElementById(id).src);
+if (document.getElementById(id).src	== "http://localhost/images/DownloadFolder_Disable.png") {	
+document.getElementById(id).src	= "images/DownloadFolder_Enable.png";}
+
+else if(document.getElementById(id).src	== "http://localhost/images/DownloadFolder_Enable.png"){
+document.getElementById(id).src	= "images/DownloadFolder_Disable.png";}
+
+else if (document.getElementById(id).src	== "http://localhost/images/VisualizarFolder_Disable.png") {
+document.getElementById(id).src	= "images/VisualizarFolder_Enable.png";}
+
+else if (document.getElementById(id).src	== "http://localhost/images/VisualizarFolder_Enable.png") {
+document.getElementById(id).src	= "images/VisualizarFolder_Disable.png";}
+
+else if (document.getElementById(id).src	== "http://localhost/images/EditarFolder_Disable.png") {
+document.getElementById(id).src	= "images/EditarFolder_Enable.png";}
+
+else if (document.getElementById(id).src	== "http://localhost/images/EditarFolder_Enable.png") {
+document.getElementById(id).src	= "images/EditarFolder_Disable.png";}
+}

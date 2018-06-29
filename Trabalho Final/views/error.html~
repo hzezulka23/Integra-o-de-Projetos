@@ -1,0 +1,15 @@
+<script src ="/javascripts/jquery-3.3.1.js"></script>
+<script src="exemple.js"></script>
+
+Erro!
+
+
+<div style = "position:fixed; margin-left: 3%; margin-top: 16.2%; height: 10%; width :40%;  ">
+				<h3 style = "color: black; font-size: 135%; margin-top: 0;">Qual será o nome da nova pasta?</h3>
+				<form id="inputform" onsubmit="return false;"> 
+					<input type= "text"; id="input"; style="border-color: black; border-style: solid; border-width: 2px; width: 65% ">
+				</form>
+				<input type="submit" onclick="CreateByInput();" ; style= "display: none;";><br/>
+			</div>
+			
+			

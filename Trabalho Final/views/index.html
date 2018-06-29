@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<script src ="javascripts/jquery-3.3.1.js"></script>
+<script src ="javascripts/Transactions.js"></script> 
+<link rel = "stylesheet" type="text/css" href = "stylesheets/normalize.css" /> 
+  </head>
+  <body>
+    <div class="container"  style= "width:350px; height:250px; margin-top:-20px; background-color:red;" >
+		<h2 onclick ="f1()">UFSC-Blumenau: </h2>
+		<h3>Temperatura:</h3>
+		<h3 style="margin-top: -42px; margin-left:150px;" id="bnut" >t</h3>
+		<h3>Humidade:</h3>
+		<h3 style="margin-top: -42px; margin-left:125px;" id="bnuh" >h</h3>
+		<h3>Velocidade do Vento:</h3>
+		<h3 style="margin-top: -42px; margin-left:225px;" id="bnus" >s</h3>
+		<h3>Direção do Vento:</h3>
+		<h3 style="margin-top: -42px; margin-left:195px;" id="bnud" >d</h3>
+    </div>
+     <div class="container"  style= "width:350px; height:250px; background-color:green; margin-left:350px;margin-top:-270px;" >
+		<h2 onclick ="f2()">Porto de Itajaí: </h2>
+		<h3>Temperatura:</h3>
+		<h3 style="margin-top: -42px; margin-left:150px;" id="itjt" >t</h3>
+		<h3>Humidade:</h3>
+		<h3 style="margin-top: -42px; margin-left:125px;" id="itjh" >h</h3>
+		<h3>Velocidade do Vento:</h3>
+		<h3 style="margin-top: -42px; margin-left:225px;" id="itjs" >s</h3>
+		<h3>Direção do Vento:</h3>
+		<h3 style="margin-top: -42px; margin-left:195px;" id="itjd" >d</h3>     
+     <div>
+     <div class="container"  style= "width:350px; height:250px; background-color:blue; margin-left:350px;margin-top:-202px;" >
+		<h2 onclick ="f3()">Aeroporto de Navegantes: </h2>
+		<h3>Temperatura:</h3>
+		<h3 style="margin-top: -42px; margin-left:150px;" id="nvgt" >t</h3>
+		<h3>Humidade:</h3>
+		<h3 style="margin-top: -42px; margin-left:125px;" id="nvgh" >h</h3>
+		<h3>Velocidade do Vento:</h3>
+		<h3 style="margin-top: -42px; margin-left:225px;" id="nvgs" >s</h3>
+		<h3>Direção do Vento:</h3>
+		<h3 style="margin-top: -42px; margin-left:195px;" id="nvgd" >d</h3>     
+     <div>
+		<div class="container"  style= "width:350px; height:250px; background-color:grey; margin-top: 67px; margin-left:-700px;"; onclick="f5()";>    
+		<h2 onclick =>ITAJAI - UFSC: </h2>
+		<h3>TEMPO DE CARRO:</h3>
+		<h3 style="margin-top: -42px; margin-left:215px;" id="iu" >t</h3>
+		<h3>TEMPO DE ONIBUS:</h3>
+		<h3 style="margin-top: -42px; margin-left:230px;" id="iub" >t</h3>
+		</div> 		
+		<div class="container"  style= "width:350px; height:250px; background-color:pink; margin-top: -270px; margin-left:-350px;"; onclick="f4()";>     
+		<h2 onclick =>ITAJAI - VILA GERM: </h2>
+		<h3>TEMPO DE CARRO:</h3>
+		<h3 style="margin-top: -42px; margin-left:215px;" id="iv" >t</h3>
+		<h3>TEMPO DE ONIBUS:</h3>
+		<h3 style="margin-top: -42px; margin-left:230px;" id="ivb" >t</h3></div>  	  		
+  		<div class="container"  style= "width:350px; height:250px; background-color:brown; margin-top: -270px; margin-left:0px;"; onclick="f6()";>      
+		<h2 onclick =>ITAJAI - PREFEITURA: </h2>
+		<h3>TEMPO DE CARRO:</h3>
+		<h3 style="margin-top: -42px; margin-left:215px;" id="ip" >t</h3>
+		<h3>TEMPO DE ONIBUS:</h3>
+		<h3 style="margin-top: -42px; margin-left:230px;" id="ipb" >t</h3></div> 	  		
+  		<div class="container"  style= "width:350px; height:250px; background-color:yellow; margin-top: -20px; margin-left:-700px;"; onclick="f7()";>        
+		<h2 onclick =>ITAJAI - NAVEGANTES: </h2>
+		<h3>TEMPO DE CARRO:</h3>
+		<h3 style="margin-top: -42px; margin-left:215px;" id="in" >t</h3>
+		<h3>TEMPO DE ONIBUS:</h3>
+		<h3 style="margin-top: -42px; margin-left:230px;" id="inb" >t</h3></div> 	  		
+  		<div class="container"  style= "width:350px; height:250px; background-color:#00ffff; margin-top: -250px; margin-left:-350px;"; onclick="f8()";></div>         		  
+  </body>
+<script>
+window.onload = function() {
+f1();
+f2();
+f3();
+f4();
+f5();
+f6();
+f7();
+}
+setInterval(function() {
+f1();
+f2();
+f3();
+f4();
+f5();
+f6();
+f7();
+alert("Updated");
+}, 60 * 1000);
+
+function f1() {
+	var param = "/Blumenau";
+	SendToIndexjs(param,function(data) {
+		document.getElementById('bnut').innerHTML = data[0];
+		document.getElementById('bnuh').innerHTML = data[1];
+		document.getElementById('bnus').innerHTML = data[2];	
+		document.getElementById('bnud').innerHTML = data[3];			
+	});	
+}
+function f2() {
+	var param = "/Itajai";
+	SendToIndexjs(param,function(data) {
+		document.getElementById('itjt').innerHTML = data[0];
+		document.getElementById('itjh').innerHTML = data[1];
+		document.getElementById('itjs').innerHTML = data[2];	
+		document.getElementById('itjd').innerHTML = data[3];			
+	});	
+}
+function f3() {
+	var param = "/Navegantes";
+	SendToIndexjs(param,function(data) {
+		document.getElementById('nvgt').innerHTML = data[0];
+		document.getElementById('nvgh').innerHTML = data[1];
+		document.getElementById('nvgs').innerHTML = data[2];	
+		document.getElementById('nvgd').innerHTML = data[3];			
+	});	
+}
+function f4() {
+	var param = "/Directions_to_Vila";
+	SendToIndexjs(param,function(data) {
+	document.getElementById('iv').innerHTML = data[0];
+	document.getElementById('ivb').innerHTML = data[1];		
+	});	
+}
+function f5() {
+	var param = "/Directions_to_UFSC";
+	SendToIndexjs(param,function(data) {
+	document.getElementById('iu').innerHTML = data[0];
+	document.getElementById('iub').innerHTML = data[1];			
+	});	
+}
+function f6() {
+	var param = "/Directions_to_Prefeitura";
+	SendToIndexjs(param,function(data) {
+	document.getElementById('ip').innerHTML = data[0];
+	document.getElementById('ipb').innerHTML = data[1];			
+	});	
+}
+function f7() {
+	var param = "/Directions_to_Navegantes";
+	SendToIndexjs(param,function(data) {
+	document.getElementById('in').innerHTML = data;
+	document.getElementById('inb').innerHTML ="Uber";		
+	});	
+}
+function f8() {
+	var param = "/SaveParam";
+	SendToIndexjs(param,function(data) {	
+	});	
+}
+</script>
+<style>
+h3{
+font-size: 19px;}
+</style>
+</html>
