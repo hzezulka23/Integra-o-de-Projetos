@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/Blumenau', function(req, res, next) {
+router.get('/Blumenau', function(req, res) {
 
   var Blumenau=[0,1,2,3]; 
  
@@ -27,10 +27,7 @@ router.get('/Blumenau', function(req, res, next) {
       res.render('index', {weather: null, error: 'Error, please try again'});
     } else {
       let weather = JSON.parse(body)
-         console.log(weather.main.temp);
-         console.log(weather.main.humidity);
-	 console.log(weather.wind.speed);
-         console.log(weather.wind.deg);
+         console.log("Consultando Dados Blumenau");
 	Blumenau = [weather.main.temp,weather.main.humidity,weather.wind.speed,weather.wind.deg];
 	res.send(Blumenau);
       if(weather.main == undefined){
@@ -43,7 +40,7 @@ router.get('/Blumenau', function(req, res, next) {
   }); 	
 });
 
-router.get('/Itajai', function(req, res, next) {
+router.get('/Itajai', function(req, res) {
 
   var Itajai=[0,1,2,3]; 
  
@@ -54,10 +51,7 @@ router.get('/Itajai', function(req, res, next) {
       res.render('index', {weather: null, error: 'Error, please try again'});
     } else {
       let weather = JSON.parse(body)
-         console.log(weather.main.temp);
-         console.log(weather.main.humidity);
-	 console.log(weather.wind.speed);
-         console.log(weather.wind.deg);
+       console.log("Consultando Dados Itajai");
 	Itajai = [weather.main.temp,weather.main.humidity,weather.wind.speed,weather.wind.deg];
 	res.send(Itajai);
       if(weather.main == undefined){
@@ -81,10 +75,7 @@ router.get('/Navegantes', function(req, res, next) {
       res.render('index', {weather: null, error: 'Error, please try again'});
     } else {
       let weather = JSON.parse(body)
-         console.log(weather.main.temp);
-         console.log(weather.main.humidity);
-	 console.log(weather.wind.speed);
-         console.log(weather.wind.deg);
+            console.log("Consultando Dados Navegantes");
 	Navegantes = [weather.main.temp,weather.main.humidity,weather.wind.speed,weather.wind.deg];
 	res.send(Navegantes);
       if(weather.main == undefined){
@@ -108,14 +99,13 @@ router.get('/Directions_to_Vila', function(req, res, next) {
       res.render('index', {weather: null, error: 'Error, please try again'});
     } else {
       let dire = JSON.parse(body)
-      console.log(dire.rows[0].elements[0].duration.text);
+         console.log("Consultando Direcoes para Vila");
       Direct1[0] = dire.rows[0].elements[0].duration.text
 		request(urlb, function (err, response, body) {
     if(err){
       res.render('index', {weather: null, error: 'Error, please try again'});
     } else {
       let direct = JSON.parse(body)
-      console.log(direct.rows[0].elements[0].duration.text);
       Direct1[1] = direct.rows[0].elements[0].duration.text
       res.send(Direct1);
     }
@@ -134,14 +124,13 @@ router.get('/Directions_to_UFSC', function(req, res, next) {
       res.render('index', {weather: null, error: 'Error, please try again'});
     } else {
       let dire = JSON.parse(body)
-      console.log(dire.rows[0].elements[0].duration.text);
+      console.log("Consultando Direcoes para UFSC");
       Direct2[0] = dire.rows[0].elements[0].duration.text
 		request(urlb, function (err, response, body) {
     if(err){
       res.render('index', {weather: null, error: 'Error, please try again'});
     } else {
       let direct = JSON.parse(body)
-      console.log(direct.rows[0].elements[0].duration.text);
       Direct2[1] = direct.rows[0].elements[0].duration.text
       res.send(Direct2);
     }
@@ -161,14 +150,13 @@ router.get('/Directions_to_Prefeitura', function(req, res, next) {
       res.render('index', {weather: null, error: 'Error, please try again'});
     } else {
       let dire = JSON.parse(body)
-      console.log(dire.rows[0].elements[0].duration.text);
+         console.log("Consultando Direcoes para Prefeitura");
       Direct3[0] = dire.rows[0].elements[0].duration.text
 		request(urlb, function (err, response, body) {
     if(err){
       res.render('index', {weather: null, error: 'Error, please try again'});
     } else {
       let direct = JSON.parse(body)
-      console.log(direct.rows[0].elements[0].duration.text);
       Direct3[1] = direct.rows[0].elements[0].duration.text
       res.send(Direct3);
     }
@@ -188,7 +176,7 @@ router.get('/Directions_to_Navegantes', function(req, res, next) {
       res.render('index', {weather: null, error: 'Error, please try again'});
     } else {
       let dire = JSON.parse(body)
-      console.log(dire.rows[0].elements[0].duration.text);
+         console.log("Salvando Dados");
       Direct4[0] = dire.rows[0].elements[0].duration.text
       res.send(Direct4);
     } });});
@@ -196,7 +184,6 @@ router.get('/Directions_to_Navegantes', function(req, res, next) {
 router.get('/SaveParam/:path', function(req, res, next) {
 	 const path = (req.params.path);
 	 const parametros = path.split("_");
-	 console.log(parametros);
     const insert = "insert into dados.clima(datevalue ,temperatura,umidade,vento)values(?,?,?,(?,?))";
      const params = [parametros[0],parametros[1],parametros[2],parametros[3],parametros[4]];
     client.execute(insert,params,{ prepare: true }, function (err) {
@@ -213,7 +200,6 @@ router.get('/SaveParam/:path', function(req, res, next) {
 router.get('/SaveParamgps1/:path', function(req, res, next) {
 	 const path = (req.params.path);
 	 const parametros = path.split("_");
-	 console.log(parametros);
     const insert = "insert into dados.gps1(datevalue ,carro,onibus)values(?,?,?);";
      const params = [parametros[0],parametros[1],parametros[2]];
     client.execute(insert,params,{ prepare: true }, function (err) {
@@ -229,15 +215,14 @@ router.get('/SaveParamgps1/:path', function(req, res, next) {
 router.get('/SaveParamgps2/:path', function(req, res, next) {
 	 const path = (req.params.path);
 	 const parametros = path.split("_");
-	 console.log(parametros);
     const insert = "insert into dados.gps2(datevalue ,carro,onibus)values(?,?,?);";
      const params = [parametros[0],parametros[1],parametros[2]];
     client.execute(insert,params,{ prepare: true }, function (err) {
         if (err) {
-           	console.log("erro gps1");
+           	console.log("erro gps2");
         }
         else{
-            console.log("Inserido gps1");
+            console.log("Inserido gps2");
         }
         });
 });
@@ -245,7 +230,6 @@ router.get('/SaveParamgps2/:path', function(req, res, next) {
 router.get('/SaveParamgps3/:path', function(req, res, next) {
 	 const path = (req.params.path);
 	 const parametros = path.split("_");
-	 console.log(parametros);
     const insert = "insert into dados.gps3(datevalue ,carro,onibus)values(?,?,?);";
      const params = [parametros[0],parametros[1],parametros[2]];
     client.execute(insert,params,{ prepare: true }, function (err) {
@@ -253,7 +237,7 @@ router.get('/SaveParamgps3/:path', function(req, res, next) {
            	console.log("erro gps3");
         }
         else{
-            console.log("Inserido gps1");
+            console.log("Inserido gps3");
         }
         });
 });
@@ -266,10 +250,10 @@ router.get('/SaveParamgps5/:path', function(req, res, next) {
      const params = [parametros[0],parametros[1],parametros[2]];
     client.execute(insert,params,{ prepare: true }, function (err) {
         if (err) {
-           	console.log("erro gps1");
+           	console.log("erro gps5");
         }
         else{
-            console.log("Inserido gps1");
+            console.log("Inserido gps5");
         }
         });
 });

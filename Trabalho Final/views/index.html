@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Test</title>
+    <title>Integração de Sistemas</title>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 <script src ="javascripts/jquery-3.3.1.js"></script>
 <script src ="javascripts/Transactions.js"></script> 
@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="container"  style= "width:350px; height:250px; margin-top:-20px; background-color:red;" >
-		<h2 onclick ="f1()">UFSC-Blumenau: </h2>
+		<h2 onclick ="ParamBlumenau()">UFSC-Blumenau: </h2>
 		<h3>Temperatura:</h3>
 		<h3 style="margin-top: -42px; margin-left:125px;" id="bnut" >t</h3>
 		<h3 style="margin-top: -40px; margin-left:150px;">°C</h3>
@@ -26,7 +26,7 @@
 		<h3 style="margin-top: -40px; margin-left:180px;">deg</h3>	
     </div>
      <div class="container"  style= "width:350px; height:250px; background-color:green; margin-left:350px;margin-top:-270px;" >
-		<h2 onclick ="f2()">Porto de Itajaí: </h2>
+		<h2 onclick ="ParamItajai()">Porto de Itajaí: </h2>
 		<h3>Temperatura:</h3>
 		<h3 style="margin-top: -42px; margin-left:125px;" id="itjt" >t</h3>
 		<h3 style="margin-top: -40px; margin-left:150px;">°C</h3>
@@ -45,7 +45,7 @@
 		    
      </div>
      <div class="container"  style= "width:350px; height:250px; background-color:blue; margin-left:700px;margin-top:-270px;" >
-		<h2 onclick ="f3()">Aeroporto de Navegantes: </h2>
+		<h2 onclick ="ParamNavegantes()">Aeroporto de Navegantes: </h2>
 		<h3>Temperatura:</h3>
 		<h3 style="margin-top: -42px; margin-left:125px;" id="nvgt" >t</h3>
 		<h3 style="margin-top: -40px; margin-left:150px;">°C</h3>
@@ -65,39 +65,46 @@
      </div>
      
      <div style="position: relative; background-color:white; width: 1050px; height:250px; margin-top:-50px;">
-     	<div style="position:fixed; background-color:white; width: 200px; height:220px;margin-top:20px">
+     	<div style="position:absolute; background-color:white; width: 200px; height:220px;margin-top:20px">
      		<h3 style="Font-family: Helvetica; ";>Digite o nome da cidade que você deseja saber o tempo de descolacamento partindo do Porto de Itajaí: (ex: Navegantes, Prefeitura, UFSC, Vila Germânica)</h3>
      	</div>
      	<form id="inputform2" onsubmit="return false;"> 
 			<textarea id="text" name="textarea"; rows="1"; style="position:absolute;margin-top:100px; margin-left:300px;border-color: black; border-style: solid; border-width: 2px; width:200px;"placeholder="Cidade"></textarea>						
 	  	</form>
-	  	<div onclick="f9()" style="position:absolute;margin-top:140px; margin-left:350px;border-color: gray; background-color:black; width: 120px; height:50px;">Enviar
+	  	<div onclick="Get_Input()" style="position:absolute;margin-top:140px; margin-left:350px;border-color: gray; background-color:black; width: 120px; height:50px;">Enviar
 	 		<h3 style="margin-top:-5px;margin-left:18px;Font-family: Helvetica;color:white;cursor:pointer";>ENVIAR</h3></div> 
 			<div class="container"  style= "position:absolute;width:400px; height:250px; background-color:white; margin-left:600px;margin-top:0px;" >
 				<h3 style="margin-top: 50px; font-size: 30px; ">Carro:</h3>
-				<h3 style="postion: fixed;margin-top: -55px; margin-left:100px;" id="car" >t</h3>
+				<h3 style="postion: absolute;margin-top: -55px; margin-left:100px;" id="car" >t</h3>
 				<h3 style="margin-top: 50px; font-size: 30px; ">Ônibus:</h3>
 				<h3 style="margin-top: -55px; margin-left:110px;" id="bus" >h</h3>   
      		</div>     
      </div>
-      <div  style="position: relative; background-color:gray; width: 1050px; height:250px; margin-top:0px;"></div>		
+      <div  style="position: absolute; background-color:gray; width: 1050px; height:220px; margin-top:0px;">		
+			 		<h3 style="postion:relative;margin-top:50px;margin-left:18px;Font-family: Helvetica;">Alunos: Gabriel Alves</h3>
+			 		<h3 style="position:relative;margin-left:93px;margin-top:-10px;Font-family: Helvetica;";>Humberto Zezulka Machado</h3>
+			 		<h3 style="postion:relative;margin-top:20px;margin-left:18px;Font-family: Helvetica;">Professor: Maiquel de Brito</h3>
+					<h3 style="postion:relative;margin-top:-90px;margin-left:500px;Font-family: Helvetica;">Para acessar o Git do Projeto</h3>
+					<a href="https://github.com/hzezulka23/Integra-o-de-Projetos/tree/master/Trabalho%20Final" style="position:absolute;margin-top:-10px;margin-left:580px; font-size:20px;">Clique Aqui</a>
+	
+			</div>  
 		</body>
 <script>
 window.onload = function() {
-f1();
-f2();
-f3();
+ParamBlumenau();
+ParamItajai();
+ParamNavegantes();
 
 }
 setInterval(function() {
-f1();
-f2();
-f3();
-f8(document.getElementById('itjt').innerHTML,document.getElementById('itjh').innerHTML,document.getElementById('itjs').innerHTML,document.getElementById('itjd').innerHTML);
+ParamBlumenau();
+ParamItajai();
+ParamNavegantes();
+Save_Param_Itajai(document.getElementById('itjt').innerHTML,document.getElementById('itjh').innerHTML,document.getElementById('itjs').innerHTML,document.getElementById('itjd').innerHTML);
 
 }, 60 * 1000);
 
-function f1() {
+function ParamBlumenau() {
 	var param = "/Blumenau";
 	SendToIndexjs(param,function(data) {
 		document.getElementById('bnut').innerHTML = data[0];
@@ -106,7 +113,7 @@ function f1() {
 		document.getElementById('bnud').innerHTML = data[3];			
 	});	
 }
-function f2() {
+function ParamItajai() {
 	var param = "/Itajai";
 	SendToIndexjs(param,function(data) {
 		document.getElementById('itjt').innerHTML = data[0];
@@ -115,7 +122,7 @@ function f2() {
 		document.getElementById('itjd').innerHTML = data[3];			
 	});	
 }
-function f3() {
+function ParamNavegantes() {
 	var param = "/Navegantes";
 	SendToIndexjs(param,function(data) {
 		document.getElementById('nvgt').innerHTML = data[0];
@@ -124,36 +131,36 @@ function f3() {
 		document.getElementById('nvgd').innerHTML = data[3];			
 	});	
 }
-function f4() {
+function Direct_to_Vila() {
 	var param = "/Directions_to_Vila";
 	SendToIndexjs(param,function(data) {
 	document.getElementById('car').innerHTML = data[0];
 	document.getElementById('bus').innerHTML = data[1];
-	f11(data[0],data[1]);			
+	ParamBlumenau1(data[0],data[1]);			
 	});	
 }
-function f5() {
+function Direct_to_UFSC() {
 	var param = "/Directions_to_UFSC";
 	SendToIndexjs(param,function(data) {
 document.getElementById('car').innerHTML = data[0];
 	document.getElementById('bus').innerHTML = data[1];
-	f10(data[0],data[1]);			
+	ParamBlumenau0(data[0],data[1]);			
 	});	
 }
-function f6() {
+function Direct_to_Prefeitura() {
 	var param = "/Directions_to_Prefeitura";
 	SendToIndexjs(param,function(data) {
 	document.getElementById('car').innerHTML = data[0];
 	document.getElementById('bus').innerHTML = data[1];	
-	f12(data[0],data[1]);			
+	ParamBlumenau2(data[0],data[1]);			
 	});	
 }
-function f7() {
+function Direct_to_Naveg() {
 	var param = "/Directions_to_Navegantes";
 	SendToIndexjs(param,function(data) {
 	document.getElementById('car').innerHTML = data[0];
 	document.getElementById('bus').innerHTML = "UBER"	
-	f13(data[0],data[1]);			
+	ParamBlumenau3(data[0],data[1]);			
 	});	
 }
 
@@ -171,7 +178,7 @@ function RealTime() {
 }
 
 
-function f8(temp,hum,spd,dire) {
+function Save_Param_Itajai(temp,hum,spd,dire) {
 	var Time = RealTime();
 	
 	var param = ["/SaveParam/",Time,"_",temp,"_",hum,"_",spd,"_",dire];
@@ -180,26 +187,26 @@ param = param.join("");
 	});	
 }
 
-function f9() {
+function Get_Input() {
 var Input = (document.getElementById("text").value);
 	if((Input=="Navegantes")||(Input=="navegantes")){
-		f7();
+		Direct_to_Naveg();
 		}
 	else if((Input=="UFSC")||(Input=="ufsc")||(Input=="Ufsc")){
-		f5();
+		Direct_to_UFSC();
 		}
 	else if((Input=="Prefeitura")||(Input=="prefeitura")){
-		f6();
+		Direct_to_Prefeitura();
 		}
 	else if((Input=="Vila Germânica")||(Input=="vila germânica")||(Input=="vila germanica")||(Input=="Vila Germanica")){
-		f4();
+		Direct_to_Vila();
 		}	
 	else {
 		alert("Cidade não consta no nosso banco de dados");	
 }	
 }
 	
-function f10(car,bus) {
+function ParamBlumenau0(car,bus) {
 	var Time = RealTime();
 var param = ["/SaveParamgps1/",Time,"_",car,"_",bus];
 param = param.join("");
@@ -207,14 +214,14 @@ param = param.join("");
 	});	
 }	
 
-function f11(car,bus) {
+function ParamBlumenau1(car,bus) {
 	var Time = RealTime();
 var param = ["/SaveParamgps2/",Time,"_",car,"_",bus];
 param = param.join("");
 	SendToIndexjs(param,function(data) {	
 	});	
 }
-function f12(car,bus) {
+function ParamBlumenau2(car,bus) {
 	var Time = RealTime();
 var param = ["/SaveParamgps3/",Time,"_",car,"_",bus];
 param = param.join("");
@@ -222,7 +229,7 @@ param = param.join("");
 	});	
 }
 
-function f13(car,bus) {
+function ParamBlumenau3(car,bus) {
 	var Time = RealTime();
 var param = ["/SaveParamgps5/",Time,"_",car,"_",bus];
 param = param.join("");
