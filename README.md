@@ -7,7 +7,7 @@ O algoritmo desenvolvido recebe uma requisição do cliente e de acordo com o ti
 
 ## Quick start:
 <p>1- Fazer download completo do repositório.<p>
-<p>2- Abrir algum navegador e acessar o endereço:http://206.189.231.128:3000.<p>
+<p>2- Abrir algum navegador e acessar o endereço:http://206.189.231.128:3000.
 <p>3- Inserir o nome de um dos seguintes locais no campo 'Cidade':<p>  
 <p>- Navegantes<p>   
 <p>- Prefeitura<p> 
